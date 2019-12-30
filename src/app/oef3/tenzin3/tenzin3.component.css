@@ -1,0 +1,8 @@
+body{
+ background-image: url('../../../assets/img_TL/backgrnd.jpg') ; 
+ height: auto;
+ color: white;
+}
+button{
+    width: 300px;
+}

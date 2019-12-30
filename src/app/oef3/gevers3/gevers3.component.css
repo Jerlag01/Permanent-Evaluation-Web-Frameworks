@@ -1,0 +1,36 @@
+.header{
+    background-color: gray;
+    
+}
+h1{
+    border-color: black;
+    border-style: ridge;
+    margin-bottom: 0px;
+    font-style: italic;
+    color:darkgrey;
+    opacity: 60%;
+}
+
+select{
+    width: 100%;
+}
+
+.andereservice{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: lightgrey;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+table{
+    width: 100%;
+}
+

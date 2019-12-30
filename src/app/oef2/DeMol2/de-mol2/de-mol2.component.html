@@ -1,0 +1,35 @@
+<h3>Robin De Mol</h3>
+<h2 (click)="onMouseClick($event)">You clicked on this text for: {{TimesClicked}} times</h2>
+<h4>Welkom in de cinema</h4>
+<div *ngIf="KeuzeGemaakt == false && MagBetalen == false">
+    <p>Deze films zijn momenteel te zien</p>
+    <ul *ngFor="let films of FilmLijst">
+        <li>{{films}}</li>
+    </ul>
+    <p>Heb je zelf een film dat je will toevoegen aan de lijst?</p>
+    <form action="">
+        Film Naam <input #Naam name="film" id="inputfilm" type="text" [(ngModel)]="Film" value="">
+        <button (click)="VoegFilmToe(Naam)">Verzend Film</button><br><br>
+        Kies Film<input name="filmkeuze" type="text" [(ngModel)]="FilmKeuze" value=""
+            placeholder="Kies film door nummers te gebruiken">
+        <button (click)="KeuzeFilmGemaakt()">Verzend Keuze</button><br>
+    </form>
+</div>
+<div *ngIf="KeuzeGemaakt == true">
+    <p>U koos voor de volgende film</p>
+    <h2> {{FilmNaam}}</h2>
+    <h2>Ticket Kost</h2>
+    <h3>{{FilmKost | currency: 'EUR'}}</h3>
+    <p>Bent u boven de 16 jaar?</p>
+    <button [disabled]="IsBoven16Jaar" (click)="JaarCheck()">Ja</button>
+    <button [disabled]="IsBoven16Jaar">Nee</button><br><br>
+    <button [disabled]="!IsBoven16Jaar" (click)="HeeftBetaald()">Betaal Ticket</button>
+    <br><br><button (click)="Reset()">Home</button>
+</div>
+
+<div *ngIf="MagBetalen == true">
+    <h2>Bedankt voor te betalen</h2>
+    <h3>Uw koste waren {{FilmKost | currency: 'EUR'}}</h3>
+    <br><br><button (click)="Reset()">Home</button>
+</div>
+<br>

@@ -1,0 +1,27 @@
+
+<div>
+    
+    <app-ruys-child></app-ruys-child>
+    <table *ngIf="monsterinfo">
+
+        <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>CR</th>
+        </tr>
+        <tr  style="text-align:center">
+            
+            <td>{{monsterinfo.index}}</td>
+            <td>{{monsterinfo.name}}</td>
+            <td>{{monsterinfo.type}}</td>
+            <td>{{monsterinfo.challenge_rating}}</td>
+        </tr>
+
+    </table>
+
+</div>
+<div *ngIf="spaceX">
+    Next spaceX mission name: {{spaceX.mission_name}}
+</div>

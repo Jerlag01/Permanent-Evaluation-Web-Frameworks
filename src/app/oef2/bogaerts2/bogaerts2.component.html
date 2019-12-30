@@ -1,0 +1,13 @@
+Bogaerts Kobe
+<div>
+    <div>
+        <div *ngIf="isNameEmpty">
+            <label [style.color]="errorColor" [style.font-size]="errorSize">Name is empty, type a naam pls!</label>
+        </div>
+        <input #in1 type="text" (keydown)="onkeyDown($event)" placeholder="Enter name here">
+        <button (click)="addName(in1)">Add</button>
+    </div>
+    <div class="nameList">
+        <p *ngFor="let naam of namenLijst" [style.color]="naam.kleur">Name: {{naam.naam}}</p>
+    </div>
+</div>

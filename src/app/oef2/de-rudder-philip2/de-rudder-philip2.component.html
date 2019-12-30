@@ -1,0 +1,40 @@
+De Rudder Philip
+<div >
+    <input #newItem
+      (keyup.enter)="addItem(newItem.value)"
+      (blur)="addItem(newItem.value); newItem.value='' ">
+
+    <button [textContent]="ButtonName"  (click)="addItem(newItem.value)"></button>
+    <p>booschappenlijst:</p>
+    <ol><li *ngFor="let booschap of StandaarBoodschappen">{{booschap}}</li></ol>
+</div>
+
+<div>
+    <div [style.background-color]="BackgroundC" (mouseover)="changeText=true" (mouseout)="changeText=false">
+        <span *ngIf="!changeText">MouseOver</span>
+        <span *ngIf="changeText">Hover</span>
+      </div>
+      <a [href]="url">google link</a>
+</div>
+
+<div>
+   
+    <div> Months :
+        <select>
+           <option *ngFor = "let i of months">{{i}}</option>
+        </select>
+     </div>
+     <br/>
+     
+     <div>
+        <span *ngIf = "isavailable; then condition1 else condition2">
+           Condition is valid.
+        </span>
+        <ng-template #condition1>Condition is valid</ng-template>
+        <ng-template #condition2>Condition is invalid</ng-template>
+     </div>
+     <button (click)="myClickFunction($event)">
+        Click Me
+     </button>
+</div>
+

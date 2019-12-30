@@ -1,0 +1,38 @@
+.TijdBalk 
+{
+    border: solid 1px black;
+    text-shadow: 3px 3px 5px orange;
+    margin: 5px auto;
+    width: 130px;
+    border-radius: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Naam 
+{
+    border: solid 5px black;
+    color: red;
+    margin: 5px auto;
+    width: 130px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.Today 
+{
+    border: solid 5px black;
+    color : black;
+    margin: 5px auto;
+    width: 170px;
+    border-radius: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.Random 
+{
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    border: solid 5px black;
+    color : black;
+    margin: 5px auto;
+    width: 70px;
+    border-radius: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

@@ -1,0 +1,22 @@
+<div class="container"> 
+    <div class="item2" id="MadeByDiv">
+        <h2>Made by {{NameCreator}}</h2>
+        <p>Current Time: {{currentDate | date : "HH:mm:ss"}}</p>
+    </div>
+    <div class="container2">
+        <div class="item1" id="convertMoneyDiv">
+                <input #inputValue type="number" value="{{beginWaarde}}">
+                <button (click)=convertFromEuro(inputValue.value)>Convert</button>
+                <p>{{beginWaarde | currency: 'EUR'}} => {{convertDollar | currency: 'USD'}} </p>
+                <p>{{beginWaarde | currency: 'EUR'}} => {{convertPont | currency: 'GBP'}} </p>
+                <p>{{beginWaarde | currency: 'EUR'}} => {{convertFrankZwitserland | currency: 'CHF'}} </p>
+        </div>
+        <div class="item1" id="UserInputDiv">
+            <p>when is your birthday </p>
+            <input #inputbirthday type="date">
+            <button (click)=setbirthday(inputbirthday.value)>set birthday</button>
+            <p>birthday: {{Userbirthday | date: "dd/MM/yyyy"}}</p>
+        </div>
+    </div>    
+</div>
+

@@ -1,0 +1,85 @@
+<html>
+<body>
+
+<h1>Davalos</h1>
+
+<!-- eerste pagina---------------------------------------------------- -->
+<!-- hier komt ngIf oef------------------------------ -->
+<div *ngIf="begin">
+    Naam:       <input #in1 placeholder="Naam" value="" (keyup)="onKey($event)"><br>
+    Achternaam: <input #in2 placeholder="Achternaam" value="" [(ngModel)]="Achternaam" ><br>
+    opleiding: 
+    <!-- hier komt ngfor oef------------------------------ -->
+        <select [(ngModel)]="counter">
+            <option *ngFor="let keuzes of keuze" value='{{keuzes}}'>{{keuzes}}</option>
+        </select>
+
+    <p></p>
+    <p>Waar wil je u inschrijven?</p>
+    <button [disabled]="buttonKDG" (click)=DisableAP()>KDG</button>
+    <button [disabled]="buttonAP" (click)=DisableKDG()>AP</button>
+    <p></p>
+    <button [disabled]="buttondisabled" (click)=Studentenpas(in1.value,in2,value)>maak studentenkaart</button>
+    <p></p>
+    <h2 *ngIf="leeg"> fout! geen velden openlaten!</h2>
+</div>
+
+
+<!-- 2de pagina--------------------------------------------------------- -->
+<!-- AP-------------------- -->
+<div *ngIf = "studentenpasAP">
+        <h2>AP</h2>
+        <button (click)=veranderfoto()>voeg foto/avatar toe</button>
+        <h4>{{alert}}</h4>
+        <div class="card" (mousemove)="bewogen($event)">
+            <div class="top">
+                <h4><b>STUDENTENKAART</b></h4>
+            </div>
+            <div class="top2">
+                <h4><b>STUDENT ID  2019-2020</b></h4>
+            </div>
+            <div class="h">
+                    <img src='{{fotoAp}}' style="width:50%">
+                    </div>
+            <div class="f"><img [src]='foto1' style="width:140px"></div>
+            <div class="line"></div>
+                <h4><b>{{Naam}} {{Achternaam}}</b></h4> 
+                <h4><b>studentennummer: S0585</b></h4> 
+            <div class="line"></div>
+                <h4><b>bachelor in : {{counter}}</b></h4> 
+                
+            </div>
+            <button  (click)=reset()>reset</button>
+        </div>           
+       
+       <!-- kdg-------------------------------------- -->
+       <div *ngIf="studentenpasKDG">
+            <h2>KDG</h2>
+            <button (click)=veranderfoto()>voeg foto/avatar toe</button>
+            <h4>{{alert}}</h4>
+           <div class="card2" (mousemove)="bewogen($event)">
+           <div class="tup">
+               <h4><b>STUDENTENKAART</b></h4>
+           </div>
+           <div class="tup2">
+               <h4><b>STUDENT ID  2019-2020</b></h4>
+           </div>
+           <div class="h">
+                <img src='{{fotoKdg}}' style="width:10%">
+                 </div>
+           <div class="f"><img [src]='foto1' style="width:140px"></div>
+            <div class="lune"></div>
+               <h4><b><font color="white">{{Naam}} {{Achternaam}}</font></b></h4> 
+               <h4><b><font color="white">studentennummer: S0266</font></b></h4> 
+            <div class="lune"></div>
+               <h4><b><font color="white">bachelor in : {{counter}}</font></b></h4> 
+               
+           </div>
+           <button  (click)=reset()>reset</button>
+        </div>
+
+        
+        
+
+</body>
+</html> 

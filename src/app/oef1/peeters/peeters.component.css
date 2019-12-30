@@ -1,0 +1,11 @@
+#inner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
+  #inner-grid > div {
+    background: lightblue;
+    padding: 8px;
+    align-content: center;
+    justify-content: center;
+  }

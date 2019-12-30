@@ -1,0 +1,21 @@
+<h1>Generate Chuck Norris jokes.</h1>
+
+<app-verhaegen-child [jokeCategories]="jokeCategories"></app-verhaegen-child>
+
+<h2>Next SpaceX launch</h2>
+<div class="spacex-table">
+    <table *ngIf="nextRocketLaunch">
+        <tr>
+            <th>Flight #</th>
+            <th>Mission</th>
+            <th>Rocket</th>
+            <th>Launch date (utc)</th>
+        </tr>
+        <tr>
+            <td>{{ nextRocketLaunch.flight_number }}</td>
+            <td>{{ nextRocketLaunch.mission_name }}</td>
+            <td>{{ nextRocketLaunch.rocket.rocket_name }}</td>
+            <td>{{ nextRocketLaunch.launch_date_utc | date: 'dd/MM/yyyy hh:mm'}}</td>
+        </tr>
+    </table>
+</div>

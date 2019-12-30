@@ -1,0 +1,22 @@
+<div id="inner-grid">
+    <div>
+        <h3>
+            Shania's component:
+        </h3>
+    </div>
+    <div>
+        <h3>
+            {{lyrics | lowercase }}
+        </h3>
+    </div>
+    <div>
+        <h3 *ngIf="IsMorning">Good morning</h3>
+        <h3 *ngIf="IsEvening">Good evening</h3>
+        <h3 *ngIf="IsAfternoon">Good afternoon</h3>
+        <h4>It's currently: {{datum | date : "H:mm"}}</h4>
+    </div>
+    <div>
+        <h3 *ngIf=Upper>{{word|uppercase}}</h3>
+        <h3 *ngIf=Lower>{{word2|lowercase}}</h3>
+    </div>
+</div>

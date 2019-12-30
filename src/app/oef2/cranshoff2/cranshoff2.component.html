@@ -1,0 +1,26 @@
+<p-panel header="Glen Cranshoff">
+    <div>
+        <div>
+            <form action="">
+                <input name="in1" #invoer type="number" [(ngModel)]="item" placeholder="enter a number">
+                <button (click)="addToList()">Add</button>
+            </form>
+            <p *ngIf="items.length == 0">add item to list</p>
+            <ul>
+                <li *ngFor="let item of items; let i =index">{{item}} <button (click)="verwijder(i)">X</button></li>
+            </ul>
+            <button [disabled]="items.length==0" (click)="ClearList()">Clear All</button>
+            <br>
+            <button [disabled]="items.length==0" (click)="CalculateAvrage()">Avrage</button>
+            <p>{{TotalAvrage | number : '1.2-2'}}</p>
+        </div>
+    
+        <div [style.background-color]="BackgroundColor" class="div2" (mousemove)="GetMousePosition($event)"> 
+            <p [innerHTML]="Xpos" ></p>
+            <p [innerHTML]="Ypos"></p>
+        </div>
+    
+        <input #in1 type="text"  placeholder="enter a color">
+        <button (click)="ChangeColor(in1.value)">Change background color</button>
+    </div>
+</p-panel>

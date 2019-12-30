@@ -1,0 +1,19 @@
+Quinten Van Ginderen
+<div>
+    <p>Quinten's module</p>
+    <p>interpolation works!{{title}}</p>
+    <p>{{date()}}</p>
+    <p>tijd {{tijd | date:'HH.mm.ss'}}</p>
+    <p>teller {{timer}}</p>
+    <p>winnende lottonummer {{nummer}}</p>
+    <p>de verjaardag is {{ birthday | date }}</p>
+    <button (click)="updatedatum()">test</button>
+    <p>press the button to update the date</p>
+        <input id="name" type="text" value="name" ng-model="placeId"/>
+        <button (click)="updateperson()">submit person</button>
+    <div *ngIf="personselected">
+        <p>showin this text if ngif = true</p>
+        <p>the name is {{person}}</p>
+    </div>
+
+</div>

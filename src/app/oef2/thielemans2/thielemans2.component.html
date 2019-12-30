@@ -1,0 +1,14 @@
+Thielemans  
+<div>
+    <input #inCity type="text" placeholder="Geef Stadsnaam België in">
+    <p>{{Searched}}</p>
+    <button (click)="checkCity(inCity)" (click)="onMouseClick($event)">VIND STAD</button>
+</div>
+<div id="maindiv" class="colour" width=100% *ngIf="Citychosen">
+    <p id="cityName"></p>
+    <img width="100%" [src]="CityImage">
+    <div *ngIf="NoCity" >
+            <button (click)="Choosecity()">VERDWIJN</button>
+    </div>
+</div>
+

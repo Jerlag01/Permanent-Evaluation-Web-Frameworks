@@ -1,0 +1,11 @@
+<div>
+<p>the weather api</p>
+<p>de temperatuur is {{data.TEMPERATURE}} graden</p>
+<p>het weer wordt omschreven als {{data.WEATHER_DES}}</p>
+</div>
+<input type="button" (click)="clicked()" value="button">
+<p *ngIf="naam">{{naam}}</p>
+
+<div><p>concatenation</p></div>
+<app-vanginderen-child [master]="master" ></app-vanginderen-child>
+<!-- hier wordt de  @input gebruikt om master door te geven aan het child component -->

@@ -1,0 +1,20 @@
+<div>
+    <p>cours: {{cours}}</p>
+    <div class="p-grid" style="margin: 10px ">
+        <div style=" background-color: grey; border: 1px solid grey; border-radius: 10px 0px 0px 10px;" class="p-col">
+            {{base}}
+        </div>
+        <input #int2CoinInput class="p-col" type="number" pInputText placeholder="Price" (input)="ConvertCoin(int2CoinInput.value)">  
+        <div style="background-color: grey;" class="p-col">
+            =====> 
+        </div>
+        <div style="background-color: #C6C3C3;" class="p-col">
+            {{bedrag  | number:'1.2'}}
+        </div>
+        <div class="p-col" style="background-color: grey; border: 1px solid grey; border-radius: 0px 10px 10px 0px;">
+            {{convert}}
+        </div>
+    </div>
+    <button pButton type="button" label="Calc again" class="ui-button-rounded" (click)="ConvertCoin(int2CoinInput.value)"></button>
+</div>
+

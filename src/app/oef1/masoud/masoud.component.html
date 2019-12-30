@@ -1,0 +1,19 @@
+<p>Voornaam word in uppercase getoond en akhternaam word in lowercase getoond</p>
+<h1>{{person.VoorNaam| uppercase }}  {{person.AkhterNaam| lowercase }}</h1>
+<br>
+karakter 3 en 4 worden getoond in de voornaam.
+<h2>{{person.VoorNaam| slice:3:5 }}</h2>
+<br>
+Hier word het text in titleCase getoond.
+<h2>{{title | titlecase}}</h2>
+<br>
+<p>data in json format</p>
+
+<h3>{{person | json }}</h3>
+<br>
+<h1>Huidge Tijd is:{{date | date:'medium'}} </h1>
+<h1>{{count*10}}</h1>
+
+
+<button (click)="teller()" >Teller</button>
+<button (click)="changeVoornaam()">ChangeVoorNaam</button>

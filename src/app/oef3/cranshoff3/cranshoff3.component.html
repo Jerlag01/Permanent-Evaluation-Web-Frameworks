@@ -1,0 +1,11 @@
+<p-panel>
+    <div>
+        <p>get the Tempeture in a city</p>
+        <input placeholder="enter city" (keydown.enter)="getWeather()" [(ngModel)]="city" />
+        <div *ngIf="city">
+            <p>city: {{this.wheater.location.name}}</p>
+            <p>temp: {{this.wheater.current.temperature}} C°</p>
+        </div>
+        <app-cranshoff-child></app-cranshoff-child>
+    </div>
+</p-panel>

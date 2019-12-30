@@ -1,0 +1,24 @@
+
+mark.black {
+    color:white;
+    background: none;
+    font-size: 1.1em;
+    font: bolder;
+}
+
+.thielemans{
+    background-color: #265E75;
+    color: lightblue;
+    padding: 2em;
+}
+
+.button {
+    background-color: rgb(33, 125, 156); /* Green */
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+  }

@@ -1,0 +1,23 @@
+<div class="component">
+  <header>
+    <p><strong>{{voorNaam | uppercase}}</strong></p>
+    <p><strong>{{achterNaam | lowercase}}</strong></p>
+    <p >{{geboorteDatum | date:"MM/dd/yyyy"}}</p>
+  </header>
+  <br>
+  <h2>Schaar Steen Papier</h2>
+  <div>
+    <button type="button" (click)="schaarSteenPapier(0)">Schaar</button>
+    <button type="button" (click)="schaarSteenPapier(1)">Steen</button>
+    <button type="button" (click)="schaarSteenPapier(2)">Papier</button>
+    <div class="stats">
+       <p>Player:   {{keuzeToString(keuze)}}</p>   
+       <p>Bot:  {{keuzeToString(randomInt)}}</p>
+       <p>{{"Uitkomst:  " + uitkomstStr}}</p>
+        <br>
+       <p>{{"Aantal keer gewonnen:   " + gewonnen}}</p> 
+       <p>Aantal keer verloren:   {{verloren}}</p>
+       <p>Win/lose ratio:  {{(gewonnen/verloren)  | number:'0.2-2'}}</p>
+    </div>
+  </div>
+<div>

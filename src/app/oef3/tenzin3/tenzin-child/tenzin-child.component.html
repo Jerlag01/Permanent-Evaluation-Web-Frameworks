@@ -1,0 +1,47 @@
+<h1>you will film in </h1>
+<div class="p-grid" *ngIf="filmsdiv">
+    
+    <div class="p-col-6">title: </div>
+    <div class="p-col-6">{{films.title}}</div>
+    <div class="p-col-6">created: </div>
+    <div class="p-col-6">{{films.created}}</div>
+</div>
+<h1>you are </h1>
+<div class="p-grid" *ngIf="peoplediv">
+    <div class="p-col-6">name: </div>
+    <div class="p-col-6">{{people.name}}</div>
+    <div class="p-col-6">birth year: </div>
+    <div class="p-col-6">{{people.birth_year}}</div>
+</div>
+<h1>your species is </h1>
+<div class="p-grid" *ngIf="speciesdiv">
+    <div class="p-col-6">name: </div>
+    <div class="p-col-6">{{species.name}}</div>
+    <div class="p-col-6">classification: </div>
+    <div class="p-col-6">{{species.classification}}</div>
+</div>
+<h1>you will live in planet </h1>
+<div class="p-grid" *ngIf="planetsdiv">
+    <div class="p-col-6">name: </div>
+    <div class="p-col-6">{{planets.name}}</div>
+    <div class="p-col-6">climate: </div>
+    <div class="p-col-6">{{planets.climate}}</div>
+    <div class="p-col-6">diameter: </div>
+    <div class="p-col-6">{{planets.diameter}}</div>
+</div>
+<h1>you will cruise in </h1>
+<div class="p-grid" *ngIf="starshipsdiv">
+    <div class="p-col-6">name: </div>
+    <div class="p-col-6">{{starships.name}}</div>
+    <div class="p-col-6">passengers: </div>
+    <div class="p-col-6">{{starships.passengers}}</div>
+</div>
+<h1>you will drive in </h1>
+<div class="p-grid" *ngIf="vehiclesdiv">
+    <div class="p-col-6">name: </div>
+    <div class="p-col-6">{{vehicles.name}}</div>
+    <div class="p-col-6">cargo capacity: </div>
+    <div class="p-col-6">{{vehicles.cargo_capacity}}</div>
+</div>
+
+

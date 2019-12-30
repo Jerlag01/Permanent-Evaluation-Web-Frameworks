@@ -1,0 +1,27 @@
+<p>punkapi</p>
+<div class="header">
+    <h1>Beer Experience</h1>
+    <select [(ngModel)]="selectorState" (ngModelChange)="onSelectChange($event)" >
+        <option value="0">nog niet gekozen</option>
+        <option value="1">bier 1</option>
+        <option value="2">bier 2</option>
+        <option value="3">bier 3</option>
+        <option value="4">bier 4</option>
+        <option value="5">bier 5</option>
+        <option value="6">Random</option>
+    </select> 
+</div>
+<app-gevers-child *ngFor="let name of beers" [beerObj]="name"></app-gevers-child>
+
+<h4>Andere service:</h4>
+<div *ngIf = "beers " class="andereservice">
+    <h3> lievelings bier van:</h3>
+    <table>
+        <tr>
+            <th>Name:</th>
+        </tr>
+        <tr *ngFor='let user of users' >
+            <td>{{user.name}}</td>
+        </tr>
+    </table>
+</div>

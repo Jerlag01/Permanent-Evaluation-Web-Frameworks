@@ -1,0 +1,40 @@
+<div class="body">
+    <p class="title">Belmans Sander</p>
+    <div class="buttons">
+        <button type="button" class="GuessButton" (click)="guess(0)">0</button>
+        <button type="button" class="GuessButton" (click)="guess(1)">1</button>
+    </div>
+    <p>50/50 procent kans om juist te gokken. Or is it??</p>
+    <div class="invisible">Hint: Hoe laat is het?</div>
+
+    <div *ngIf="rightGuess && isClicked">
+        <p>U heeft correct gegokt met nummer: {{number}}!</p>
+    </div>
+    <div *ngIf="!rightGuess && isClicked">
+        <p>Jammer maar helaas! Het juiste nummer was: {{number}}</p>
+        <p *ngIf="hint">{{hint}}</p>
+    </div>
+    <div>-----------------------------------</div>
+    <button type="button" (click)="setTime()">Hoe laat is het?</button>
+    <div *ngIf=timeSet>
+        <p>De tijd: </p>
+        <p>{{Time | date : "HH:mm:ss"}}</p>
+    </div>
+    <div>-----------------------------------</div>
+    <p>De dankbare complimentjes ontvanger.</p>
+    <p>Geef maar eens een complimentje.</p>
+    <!-- Enter to submit. -->
+    <input #box (keyup.enter)="onEnter(box.value)">
+    <br>
+    <i>{{complimentResp}}</i>
+    <!-- <p>{{enteredCompliment}}</p> -->
+    <div>-----------------------------------</div>
+    <p>Klik op de knop als je wel een mentale boost kan gebruiken.</p>
+    <button type="button" (click)="getComplimentje()" class="complimentButton">Klik mij!!!</button>
+    <br>
+    <i>{{compliment}}</i>
+    <div>-----------------------------------</div>
+    <button type="button" (click)="requestQoD()">Quote of the day.</button>
+    <br>
+    <i *ngIf="quotes">{{quotes.contents.quotes[0].quote}}</i>
+</div>

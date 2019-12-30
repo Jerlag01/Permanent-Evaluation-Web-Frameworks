@@ -1,0 +1,33 @@
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-4">
+        <h1>Get data from EUR currency</h1>
+        <div class="ui-inputgroup">
+
+            <button pButton type="button" label="Fetch" (click)="append()"></button>
+      
+        </div>
+
+     
+
+    </div>
+
+</div>
+<div class="container">
+
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Currency</th>
+            <th scope="col">value</th>
+         </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of currency">
+        
+            <td>{{data.item}} : </td>
+            <td>{{data.value}}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,13 @@
+Al Shanawany
+ <div   (mouseover)="ChangeOpacity($event)" [title]="todayDate">
+<button (click)="start()">Show/Hide</button>
+<div *ngIf="expression">
+    <img [style.opacity]="ran" src="{{imageUrl}}"  >
+</div>
+<div>
+    <p [hidden]="expression" *ngFor="let element of fibArray">{{fibArray[element]}}</p>
+</div>
+</div>
+ 
+
+

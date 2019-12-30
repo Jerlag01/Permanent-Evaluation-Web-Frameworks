@@ -1,0 +1,24 @@
+<h2>Brasserie Denief</h2>
+(De Jonghe Yve's)
+<table>
+    <h3>'t Menu</h3>
+    <tr *ngFor="let gerecht of gerechten; let i = index">
+        <td>{{gerechten[i].naam}}</td>
+        <td>{{gerechten[i].prijs | currency:'EUR':true}}</td>
+    </tr>
+</table>
+
+
+<form action="" [hidden]="isShow">
+    <h3>Menu aanpassen</h3>
+    <input type="text" #gerechtNaam name="gerechtNaam" [(ngModel)]="naam" placeholder="Wa wilde oep de menu zette?"><br>
+    <input type="number" #gerechtPrijs name="gerechtPrijs" [(ngModel)]="prijs" placeholder="En wa moet da koste?"><br>
+    <button (click)="addDish(gerechtNaam.value, gerechtPrijs.value)">Toevoegen</button>
+
+    <p>Klikt nog ne keer oep den top ast kleir is.</p>
+</form>
+
+
+<p [hidden]="!isShow">Zedde gij de chef? Klikt dan iere om ave menu aan te passe.</p>
+
+<button (click)="toggleForm()">ikChef</button>

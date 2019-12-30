@@ -1,0 +1,13 @@
+<div>
+    <h1 class="vincent">{{naam | uppercase}}</h1>
+    hoeveel geld wil je 
+    <br>
+    <input type="number" [(ngModel)]="Counter">
+    <br>
+    je wilt dus ? 
+    <h1 class="rood1" *ngIf="Counter <0">{{Counter| currency:'EUR' }}</h1>
+    <h1 class="groen1" *ngIf="Counter >0">{{Counter| currency:'EUR' }}</h1>
+    <p class="rood2" *ngIf="totaal<0 && Counter !=0 && Counter !=null ">sorry je hebt een boete van {{totaal | currency:'EUR' }} gekregen om {{nu |date:'HH:mm'}}</p>
+    <p class="groen2"*ngIf="totaal >0 && Counter !=0 && Counter !=null" >proficiatje op deze tijd : {{nu |date:'HH:mm'}} heb je {{totaal| currency:'EUR' }} gekregen , geven is het nieuwe krijgen  </p>
+    </div>
+    

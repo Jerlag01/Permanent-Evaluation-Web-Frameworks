@@ -1,0 +1,35 @@
+<p-card>
+<img src="{{beerObj.image_url}}" alt="foto" class="imgg">
+<p>Name beer: {{beerObj.name}}</p>
+<p> tag line: {{beerObj.tagline}}</p>
+</p-card>
+
+<!--nomaal gestyled met primng accordion module-->
+<!-- 
+    <p-accordion [multiple]="true">
+        <p-accordionTab header="About">
+            <p> first brew: {{beerObj. first_brewed}}</p>
+            <p> maker: {{beerObj.contributed_by}}</p>
+        </p-accordionTab>
+        <p-accordionTab header="description">
+            <p>{{beerObj.description}}</p>
+        </p-accordionTab>
+        <p-accordionTab header="Food Pairing">
+            <p>Deze Gerechten gaan goed bij het bier:</p>
+            <p *ngFor="let food of beerObj.food_pairing"> - {{food}}<p>
+        </p-accordionTab>
+    </p-accordion>
+-->
+<ul>
+    <li><p> first brew: {{beerObj.first_brewed}}</p></li>
+    <li><p> maker: {{beerObj.contributed_by}}</p></li>
+    <li><p>description: {{beerObj.description}}</p></li>
+    <li>
+         <ul>
+            <p>Deze Gerechten gaan goed bij het bier:</p>
+            <li *ngFor="let food of beerObj.food_pairing"> {{food}}</li>
+        </ul>
+    </li>
+    
+ </ul>
+

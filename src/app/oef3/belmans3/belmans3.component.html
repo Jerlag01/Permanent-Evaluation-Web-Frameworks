@@ -1,0 +1,38 @@
+<!-- <div class="wrapper">
+    <app-belmans-child [receivedMessage]="messageToSend"></app-belmans-child>
+    <div class="guessTheDog">
+        <p>Guess what breed of dog is in the picture.</p>
+        <p>Only the first 5 letters is enough.</p>
+        <p>You'll get a point for every right guess.</p>
+        <p>For every wrong guess, a point will be subtracted.</p>
+        <p class="points">POINTS: <strong>{{points}}</strong></p>
+        <p>Hit enter to submit.</p>
+        <input type="text" class="form-control" (keyup.enter)="OnInput($event)"><br>
+    </div>
+    <div class="newDog">
+        <button (click)="getNewRandomDog()">Click this for a new dog.</button><br>
+        <img src={{randomDog.message}}>
+    </div>
+    <div *ngIf="dogBreeds" class="dogBreeds">
+        <p>All the possible dog breeds.</p>
+        <p>{{dogBreeds.message | json}}</p>
+    </div>
+</div>
+<div class="secondService">
+    <h4>2nd service</h4>
+    <table *ngFor="let beer of beers">
+        <tr>
+            <th>Beer:</th>
+            <td>{{beer.name}}</td>
+        </tr>
+        <tr>
+            <th>Tagline:</th>
+            <td>{{beer.tagline | json}}</td>
+        </tr>
+        <tr>
+            <th>Brewing tips:</th>
+            <td>{{beer.brewers_tips | json}}</td>
+        </tr>
+    </table>
+</div>
+ -->

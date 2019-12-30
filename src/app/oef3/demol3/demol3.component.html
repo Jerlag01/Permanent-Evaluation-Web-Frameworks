@@ -1,0 +1,18 @@
+<h1>Search Anime shows</h1>
+<app-demol-child></app-demol-child>
+<input type="submit" value="Submit" (click)="GetName()"><br>
+<div *ngIf="loaded == true">
+    <button (click)="PrevPage()">Prev Page</button>
+    <button (click)="NextPage()">Next Page</button>
+    <ul *ngFor="let movie of animechar.data">
+        <li>{{movie.attributes.titles.en_jp}}</li>
+        <img src={{movie.attributes.posterImage.small}}>
+        <p>{{movie.attributes.synopsis}}</p>
+    </ul>
+    <button (click)="PrevPage()">Prev Page</button>
+    <button (click)="NextPage()">Next Page</button>
+</div>
+<div>
+    <h1>Music genre of the day</h1>
+    <h3>{{genre}}</h3>
+</div>

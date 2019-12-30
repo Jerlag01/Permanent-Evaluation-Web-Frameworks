@@ -1,0 +1,17 @@
+<h2>Guillaume de Oliveira</h2>
+
+<div *ngIf="ShowSanic" class="sanic-box" >
+    <img (mouseover)="LoseRings()" [src]="sanic.url" width="100px" height="100px">
+    <p>{{RingCounter}}</p>
+    <img [src]="sanicRing.url" height="50px" width="50px">
+</div>
+
+<div>
+   <form>
+       <h3>Geef Sanic wat ringen</h3>
+       <input #in1 type="number" value="0">
+       <button [disabled]="GiveStatus" (click)="GiveRings(in1.value)">Give Rings</button>
+   </form>
+   <br>
+   <button (click)="GottaGoFast()">{{GoFastText}}</button>
+</div>

@@ -1,0 +1,15 @@
+<p>Hieronder vind je elke persoon zijn naam en telefoonnummer.</p>
+<div class="NaamBorder">
+<h1>ID + Naam</h1>
+<div *ngFor='let user of users$'>
+    <p>{{user.id}} : {{user.name}}</p>
+</div>
+</div>
+<div class="PhoneNumber">
+<h1> ID + Telefoonnummer</h1>
+<div *ngFor='let user of users$'>
+    <p>{{user.id}} : {{user.phone}}</p>
+</div>
+</div>
+<app-jouhar-child></app-jouhar-child>
+

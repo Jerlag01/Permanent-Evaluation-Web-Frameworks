@@ -1,0 +1,67 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,10);
+    height: 320px;
+    width: 500px;
+    border-style: solid;
+    border-color: red;
+    border-radius: 29px;
+    text-align: left;
+    margin: 10px
+}
+  .top{
+  text-align: left;
+  margin: 10px;
+  color: red;
+  }
+  .line{
+  float:right;
+  width: 340px;
+  border-top: 2px solid red;
+  
+  }
+  .top2{
+  text-align: left;
+  margin: 10px;
+  }
+  .card2 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,10);
+   height: 320px;
+     width: 500px;
+      border-style: solid;
+    border-color: white;
+    background-color: black;
+    border-radius: 29px;
+    text-align: left;
+    margin: 10px
+  }
+  .tup{
+  text-align: left;
+  margin: 10px;
+  color: white;
+  }
+  .lune{
+  float:right;
+  width: 340px;
+  border-top: 2px solid white;
+  
+  }
+  .tup2{
+  text-align: left;
+  margin: 10px;
+  color:white;
+  }
+  .f{
+    float: left;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .h{
+  float: right; 
+  }
+  
+  img{
+   border-radius: 40%;
+   }
+  

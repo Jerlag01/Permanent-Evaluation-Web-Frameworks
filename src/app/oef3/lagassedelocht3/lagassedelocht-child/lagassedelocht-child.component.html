@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+ <h5>Child Component:</h5>
+    Choose model
+    <select class="form-control" [(ngModel)]="data" id="selector">
+        <option value='{{data1}}'>{{inputModel1}}</option>
+        <option value='{{data2}}'>{{inputModel2}}</option>
+        <option value='{{data3}}'>{{inputModel3}}</option>
+        <option value='{{data4}}'>{{inputModel4}}</option>
+    </select>
+    <h4>price: {{data}}</h4>
+    <hr>
+    <h3>New music genre: {{newGenre}}</h3>
+    <hr>
+    <h4>Quinten's service:</h4>
+    <p>Van Euro naar Canadese Dollar: {{course}}</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<h1>jongenelen2 works!</h1>
+<!--
+  <p>passwordt cheker</p>
+<p>met ng if lengte van input cheken en aan de hand daarvan sterktr van hetpaswoord weergeven </p>  
+
+ng for -> lijst met gerbuikte wachtwoorden
+
+hidden = propperty 
+click= event
+-->
+<p>hoe sterk is uw wachtwoord ? </p>
+<button (click)="add(wachtwoord)">check it</button>
+<input id="input" type="text" [(ngModel)]="wachtwoord">
+<ul>
+    <li *ngFor="let wachtwoord of lijst; let i =index">{{wachtwoord}}</li>
+</ul>
+<button [disabled]="lijst.length==0" (click)="clear()">clear</button>
+
+<div class="canvas" (mousemove)="GetPosition($event)">
+    <p>muis coördinaten</p>
+    <p [innerHTML]="x"></p>
+    <p [innerHTML]="y"></p>
+</div>
+
+<img [width]="Fb" [height]="Fh" src="https://ceweblognlbe.photoservices.nl/wp-content/uploads/2017/06/shutterstock_553061968.jpg">

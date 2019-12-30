@@ -1,0 +1,19 @@
+h1{
+    font: bold;
+    border: violet;
+ }
+ body{
+     background-color: black;
+     color:white;
+ }
+
+ div{
+    border: 1px solid white;
+    margin-left: 50;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 100;
+    color:white;
+    text-decoration: none;
+}

@@ -1,0 +1,11 @@
+<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+<div class="bg" [class.bg]="aantalKlik > 3">
+    <h1>{{naam | uppercase}}</h1>
+    <p>Het is {{nu | date: "hh:mm:ss a"}}</p>
+    <br>
+    <p>Je bent sinds {{tijdCounter | date: "HH:mm:ss"}} op deze pagina</p>
+    <br>
+    <p>Je klikte {{aantalKlik}} keer</p>
+    <button id="btn" (click)="klikTeller()">Klikken!</button>
+</div>
+

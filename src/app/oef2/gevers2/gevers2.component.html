@@ -1,0 +1,30 @@
+<h1>Sebastiaan Gevers</h1>
+
+<div *ngIf="uur">
+    <div>hoelang ga je winkelen: {{uur}} uur </div>
+    <div *ngIf="uur <= 2">Dat is wel heel kort</div>
+    <div *ngIf="uur >= 4">wel lang winkelen hoor</div>
+</div>
+
+<div class="recepten">
+    <ul>
+        <li *ngFor=" let d of dishe">
+            {{d.Name}}
+             <ul>
+                <li *ngFor="let ingridient of d.Ingridient">
+                   {{ingridient}}
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div>
+<img [src]="foto" alt="foto">
+
+
+
+
+
+
+

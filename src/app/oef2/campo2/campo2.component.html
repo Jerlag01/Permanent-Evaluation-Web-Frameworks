@@ -1,0 +1,7 @@
+<h1>Milan Campo</h1>
+<button [disabled]="buttonStatus" (click)="buttonStatus = !buttonStatus" (click)="ShowGrapje()" [innerHTML]="grapje+vraagteken"></button>
+<div class="grid-container">
+    <li *ngFor="let item of array" (mouseover)="ShowAnswer()" (mouseleave)="HideAnswer()">
+        <img [src]="imgURL" *ngIf="isMouseOn">
+    </li>
+</div>

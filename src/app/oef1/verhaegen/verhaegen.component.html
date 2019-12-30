@@ -1,0 +1,16 @@
+<h1>{{ naam | titlecase}}</h1>
+
+<p>Kies op hoeveel getallen na de komma je het getal PI wilt afronden</p>
+<input type="number" [(ngModel)]="NaDeKomma">
+<p>PI: {{ PI }}</p>
+
+<hr>
+
+<p>Bereken hoeveel dagen geleden je geboren bent door je geboortedatum op te geven.</p>
+<input type="date" [(ngModel)]="BirthDate">
+<p>Het verschil in dagen tussen {{ birthDate | date:'fullDate' }} en nu is: {{ daysBorn }}</p>
+
+<hr>
+
+<p #text [class.red]="isTextRed">Maak deze tekst rood door op de knop te klikken.</p>
+<button (click)="makeTextRed()">Maak rood</button>

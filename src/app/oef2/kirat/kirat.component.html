@@ -1,0 +1,38 @@
+<!-- <h4>Kirat Imad</h4>
+    Geeft fouten gelieve eerst te testen !!
+
+    
+<h2 (click)="onMouseClick($event)">You clicked on this: {{TimesClicked}} times</h2>
+<h4>Welcome to the car dealer</h4>
+<div *ngIf="ChoiceMade == false && CanPay == false">
+    <p>These cars are on the market</p>
+    <ul *ngFor="let cars of AutoLijst">
+        <li>{{Cars}}</li>
+    </ul>
+    <p>A used car you want to sell? enter here:</p>
+    <form action="">
+        Car Name <input #Naam name="Car" id="inputCar" type="text" [(ngModel)]="Car" value="">
+        <button (click)="AddCar(Naam)">Add car</button><br><br>
+        Choose car<input name="carChoise" type="text" [(ngModel)]="carChoise" value=""
+            placeholder="Choose a car">
+        <button (click)="choiseCarMade()">Send</button><br>
+
+    </div>
+    <div *ngIf="ChoiseMade == true">
+        <p>U Chose this car</p>
+        <h2> {{CarName}}</h2>
+        <h2>Cost</h2>
+        <h3>{{CarCost | currency: 'EUR'}}</h3>
+        <p>Are you over 16?</p>
+        <button [disabled]="IsAbove16" (click)="JearCheck()">Yes</button>
+        <button [disabled]="IsAbove16">No</button><br><br>
+        <button [disabled]="!IsAbove16" (click)="HasPayed()">Pay</button>
+        <br><br><button (click)="Reset()">Home</button>
+    </div>
+    
+    <div *ngIf="CanPay == true">
+        <h2>Thanks</h2>
+        <h3>Total cost was  {{CarCost | currency: 'EUR'}}</h3>
+        <br><br><button (click)="Reset()">Home</button>
+    </div>
+    <br> -->

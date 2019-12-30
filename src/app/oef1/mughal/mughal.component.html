@@ -1,0 +1,31 @@
+<h1>{{Naam}}</h1>
+<br>
+<div id="NumberBot">
+    <h3>Number Bot</h3>
+    <table>
+    <tr>
+        <th>curr Number : </th><th>{{Number}}</th>
+    </tr>
+    <tr>
+        <th>Next Number : </th><th>{{Number+1}}</th>
+    </tr>
+    <tr>
+        <th>Prev Number : </th><th>{{Number-1}}</th>
+    </tr>
+    <tr>
+        <th>power of two: </th><th>{{Number*Number}}</th>
+    </tr>
+    </table>
+</div>
+<br>
+<div id="RNG">
+    <h3>Random Name Generator</h3>
+    <h2>{{NameGenName}}</h2>
+    <button (click)="NameGen()">GENERATE</button>
+</div>
+<br>
+<div id="DaysLeft">
+    <h3>Time left</h3>
+    <h2>{{DaysLeft | date : 'mm:HH:dd'}}</h2>
+    <p>The amount of Time left until another event etc</p>
+</div>

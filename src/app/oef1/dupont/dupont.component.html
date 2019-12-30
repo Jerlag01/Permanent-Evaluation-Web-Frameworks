@@ -1,0 +1,24 @@
+<div class="date">
+    <p>vandaag is het {{today | date}}</p>
+    <p>of op een andere manier {{today | date:'fullDate'}}</p>
+    <p>de actuele tijd is {{today | date:'h:mm a z'}}</p>
+  </div>
+
+  <div class="random">
+    <input #box (keyup.enter)="onEnter(box.value)">
+
+    <p>number of letters is : {{numbOfLetters  }}</p>
+  </div>
+
+  <div class="pi">
+    <p>pi rounded up to 10th digit {{pi | number:'3.5-9'}}</p>
+    <p>pi rounded up to 5th digit {{pi | number:'3.5-5'}}</p>
+  </div>
+
+
+ 
+<div class="name">
+  <p>my normal name {{name}}</p>
+  <p>my uppercase name {{name | uppercase}}</p>
+  <p>my camel case name {{name | titlecase}}</p>
+</div>

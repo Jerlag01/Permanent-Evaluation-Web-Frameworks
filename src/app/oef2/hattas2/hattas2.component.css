@@ -1,0 +1,13 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    margin: 1em;
+    padding: 1em;
+
+    border: 1px solid black;
+}
+.UIbtn{
+    margin: 1em;
+}

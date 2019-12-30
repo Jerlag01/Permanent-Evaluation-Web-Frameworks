@@ -1,0 +1,56 @@
+<h1>Quinten Schutyser</h1>
+<p-card>
+    <div id="divMain" class="p-grid p-dir-col" *ngIf=ShowPage1>
+        <div class="p-grid p-justify-center">
+            <h1 style="margin: 15px;">First Name: </h1>
+            <div class="p-grid p-align-center vertical-container">
+                <input type="text" size="30" pInputText [(ngModel)]="UserFirstName" placeholder="First Name" (focusout)="onFocusoutFirstName($event)">
+            </div>
+        </div>
+        <div class="p-grid p-justify-center">
+            <h1 style="margin: 15px;">last Name: </h1>
+            <div class="p-grid p-align-center vertical-container">
+                <input type="text" size="30" pInputText [(ngModel)]="UserLastName" placeholder="last Name" (focusout)="onFocusoutLastName($event)">
+            </div>
+        </div>
+        <div class="p-grid p-justify-center">
+            <h1>Select the city you live: </h1>
+            <div style="margin: 15px;" class="p-grid p-align-center vertical-container">
+                <p-dropdown [options]="Cities" [(ngModel)]="selectedCity" placeholder="Select a City"
+                    optionLabel="name"></p-dropdown>
+            </div>
+        </div>
+        <div>
+            <button pButton type="button" label="Add" (click)=NextPage(c) [disabled]="(input2 || input1)"></button>
+        </div>
+    </div>
+    <div id="divMain" *ngIf=ShowPage2>
+        <h1>Hello {{UserFirstName}} {{this.UserLastName}},</h1>
+        <h2>Where do you wanne go?</h2>
+        <div class="p-grid p-justify-center">
+            <table>
+                <tr *ngFor="let c of Cities">
+                    <td>{{c.name}} ({{c.land}})</td>
+                    <td><button pButton type="button" label="Add" class="ui-button-rounded"
+                            (click)=AddToListWanneGo(c)></button></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button pButton type="button" icon="pi pi-check" iconPos="right" label="Next" (click)=NextPage2()></button>
+        </div>
+    </div>
+    <div id="divMain" *ngIf=ShowPage3>
+        <h1>wish list</h1>
+        <div class="p-grid p-justify-center">
+            <table>
+                <tr *ngFor="let c of WanneGo">
+                    <td> {{selectedCity.name}} ==> {{c.name}} ({{c.land}})</td>
+                    <p-button class="ui-button-rounded" icon="pi pi-times" (click)=RemoveFromListWanneGo(c)></p-button>
+                </tr>
+            </table>
+        </div>
+        <button pButton type="button" icon="pi pi-arrow-left" iconPos="right" label="Back "
+            (click)=BackPageFromP2()></button>
+    </div>
+</p-card>

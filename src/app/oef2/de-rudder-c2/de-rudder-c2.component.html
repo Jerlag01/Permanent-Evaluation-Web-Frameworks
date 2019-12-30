@@ -1,0 +1,19 @@
+<h2>Cedric De Rudder</h2>
+<div class="main-content">
+    <div [hidden]="hidden">
+        <div class="numbers" *ngFor="let number of numbers">
+            <div class="left" *ngIf="number%2==1">{{number}}</div><div class="right" *ngIf="number%2==0">{{number}}</div>
+        </div>
+    </div>
+    <br [hidden]="hidden">
+    <div [hidden]="hidden">
+        <input #input type="text" placeholder="Typ hier wat tekst" (keydown)="showText($event)">
+        <p class="typed">Laatste toets die je hebt ingedrukt in het tekstveld: {{letter}}</p>
+        <p><span [innerHTML]="revString"></span></p>
+        <button (click)="reverseString(input.value)" [disabled]="clicked">Reverse</button>
+    </div>
+    <br [hidden]="hidden">
+    <div>
+        <button (click)="hidden=true">Hide everything</button>
+    </div>
+</div>

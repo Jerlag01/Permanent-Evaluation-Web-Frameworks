@@ -1,0 +1,17 @@
+.spacex-table {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: .5rem;
+}

@@ -1,0 +1,7 @@
+<div id="body"> <h1>Bulckens Yves</h1>
+    <br>
+    <p>Het geld dat ik zou willen verdienen: {{teller2| currency: 'EUR'}}K </p>
+    <p>Aantal auto's dat ik hiermee kan kopen: {{autos }}</p>
+    <div> <p *ngFor="let i of dateArray | slice:1:2">{{'Iemand is geboren op: '+(i | date : format)}}</p></div>
+    <button (click)="toggleFormat()">Verander Formaat</button>
+    </div>

@@ -1,0 +1,19 @@
+<p>senten2 works!</p>
+<div>
+    <p>Boodschappenlijstje maken:</p>
+    <input type="text" id="tbBoodschappenlijstje" pInputText [(ngModel)]="name"  placeholder="Hier je product ingeven"/>
+    <p-button label="Voeg toe" (onClick)="productToevoegen($event)"></p-button>
+    <p *ngIf="boodschappenlijstje.length == 0">Voeg een product toe </p>
+    <div *ngIf="name">
+        <p>Product wordt toegevoegd in de lijst!</p>
+    </div>
+  
+    <ul>
+      <li *ngFor="let item of boodschappenlijstje">{{item}}</li>
+    </ul>
+    <p-button label="Rood" (onClick)="rood($event)"></p-button>
+    <div [style.background-color]="achtergrondKleur"> 
+        <p>De achtergrond wordt rood of wit</p>    
+    </div>
+    <img [src]="fotoURL">
+  </div>

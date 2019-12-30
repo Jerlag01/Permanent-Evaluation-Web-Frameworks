@@ -1,0 +1,17 @@
+div{
+    margin: 30px;
+}
+.points{
+    background-color: #dedede;
+    width: fit-content;
+    padding: 5px 10px;
+    margin: auto;
+}
+.secondService{
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+}
+button{
+    border-radius: 15%;
+    padding: 10px;
+}

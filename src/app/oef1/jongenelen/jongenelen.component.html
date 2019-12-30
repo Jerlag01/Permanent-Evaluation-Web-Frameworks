@@ -1,0 +1,26 @@
+<div class="body">
+    <h1> bjorn-jongenelen</h1>
+    <div class="topp">
+        <h3>de datum van vandaag is {{datum| date:'dd/MM/yyyy'}}</h3>
+        <h3>mijn verjaardag {{verj | date:'dd/MM/yyyy'}}</h3>
+        <button (click)="klik()">hoe lang tot mijn Bday ?</button>
+        <p id="output" [hidden]="show">binnen {{dif |date:'dd-MM' }} ben je jarig</p>
+
+    </div>
+
+    <div class="parentInput">
+        <div class="input1">
+            <p id="value2">maximum waarde</p>
+            <input type="text" class="input1" [(ngModel)]="maxwaarde">
+        </div>
+
+        <div class="input2">
+            <p id="value2">minimum waarde</p>
+            <input type="text" class="input2" [(ngModel)]="minwaarde">
+        </div>
+    </div>
+
+
+    <button (click)="random()">generate random number </button>
+    <h3>random getal is {{ randomnr }} </h3>
+</div>

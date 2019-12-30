@@ -1,0 +1,13 @@
+<select [(ngModel)]="selectedCategory">
+    <option *ngFor="let category of jokeCategories" [value]="category">
+        {{ category | titlecase }}
+    </option>
+</select>
+
+<button (click)="getJokeByCategory()">Generate by category</button>
+
+<br>
+
+<button (click)="getRandomJoke()">Random joke</button>
+
+<p *ngIf="currentJoke">{{ currentJoke.value }}</p>

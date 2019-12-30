@@ -1,0 +1,21 @@
+<body>
+    
+    <h1>Guillaume de Oliveira</h1>
+    <h2>Datum van vandaag: {{datum|date: 'HH:mm:ss'}}</h2>
+    <p>
+        Applicatie werd opestart {{opstarttijd}}
+    </p>
+
+    <h3>Kies een max en min waarde</h3>
+    <form>
+        Minwaarde <input class="in1" #in1 type="number" [value]="0">
+        
+        Maxwaarde <input class="in2" #in2 type="number" [value]="9">
+    </form>
+    <button (click)="RandomGen(in1.value,in2.value)">Druk voor random waarde tussen {{in1.value}} en {{in2.value}}</button>
+    <br>
+    <input class="in3" type="text" [(ngModel)]="randomgetal" [value]="randomgetal">
+
+
+
+</body>

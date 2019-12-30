@@ -1,0 +1,9 @@
+<app-senten-child></app-senten-child>
+
+<div>
+    <p>Chuck Norris Joke (VerhaegenService)</p>
+    <button (click)="getRandomJoke()">Random Chuck Norris Joke</button>
+    <p *ngIf="ChuckNorrisGrap">{{ ChuckNorrisGrap.value }}</p>
+</div>
+
+

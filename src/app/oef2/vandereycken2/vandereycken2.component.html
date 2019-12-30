@@ -1,0 +1,10 @@
+<h1 *ngFor="let nn of naam">{{nn}}</h1>
+<h2>{{ date | date:" HH:mm:ss" }}</h2>
+
+<h3>Aantal wachtwoorden gegenereerd: {{count_wachtwoord}}</h3>
+
+<button (click)="GenWachtwoord()">Genereer een wachtwoord!</button>
+<h2>{{wachtwoord}}</h2>
+<div *ngIf="count_wachtwoord >= 10">
+    <h2>U heeft al 10 wachtwoorden gegenereerd!</h2>
+</div>

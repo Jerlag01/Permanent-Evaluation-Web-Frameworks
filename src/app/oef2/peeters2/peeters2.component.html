@@ -1,0 +1,28 @@
+<H2>Shania's component:</H2>
+<div>
+    <button (mouseover)="MouseOver()" (mouseleave)="MouseLeave()"
+        [ngStyle]="{backgroundColor: hover==true  ? 'lightgrey' : 'grey' }">Hover over me</button>
+</div>
+<div>
+    <button (click)="UpCounter()">Add a Quote to the table</button>
+</div>
+<div>
+    <table>
+        <tr *ngFor="let c=counter;">
+            <td>{{counter+1}}</td>
+            <td>{{Quotes[c]}}</td>
+            <td>
+                <p *ngIf="c == 0">Dit is de eerste Quote</p>
+                <p *ngIf="c > 0 && c < 10">Dit is een Quote</p>
+                <p *ngIf="c >= 10">Dit is de laatste Quote</p>
+            </td>
+            <td>
+                <img [src]="imageUrl">
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+

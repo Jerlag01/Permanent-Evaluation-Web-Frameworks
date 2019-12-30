@@ -1,0 +1,36 @@
+<body>
+    <header>
+            <h1>STAR WARS</h1>
+            <h3>Choose your soldier number</h3> 
+            <input [(ngModel)] ="inputnumber" >
+            <h3>welcome soldier #{{soldiernumber}}</h3>
+            
+    </header>
+    <main>
+        <div *ngIf="!volgendepagina" class="p-grid p-dir-col">
+            <div class="p-col">
+                <button pButton type="button" (click)="toonFilms()" label="FILMS" class="ui-button-secondary"></button>
+            </div>
+            <div class="p-col">
+                <button pButton type="button" (click)="toonPeople()"  label="PEOPLE" class="ui-button-secondary"></button>
+            </div>
+            <div class="p-col">
+                <button pButton type="button" (click)="toonStarships()" label="STARSHIPS" class="ui-button-secondary"></button>
+            </div>
+            <div class="p-col">
+                <button pButton type="button" (click)="toonSpecies()" label="SPECIES" class="ui-button-secondary"></button>
+            </div>
+            <div class="p-col">
+                <button pButton type="button" (click)="toonVehicles()" label="VEHICLES" class="ui-button-secondary"></button>
+            </div>
+            <div class="p-col">
+                <button pButton type="button" (click)="toonPlanets()" label="PLANETS" class="ui-button-secondary"></button>
+            </div>
+        </div>
+    </main>
+    <footer>
+   <app-tenzin-child [films]="films" [filmsdiv]="resultfilms" [people]="people" [peoplediv]="resultpeople" [planetsdiv]="resultplanets" [planets]="planets" [starshipsdiv]="resultstarships" [starships]="starships" [vehiclesdiv]="resultvehicles" [vehicles]="vehicles" [speciesdiv]="resultspecies" [species]="species" ></app-tenzin-child>
+    </footer>
+    <h1>The national galaxy weather predicts {{weathertenz.WEATHER_DES}}</h1>
+    
+</body>

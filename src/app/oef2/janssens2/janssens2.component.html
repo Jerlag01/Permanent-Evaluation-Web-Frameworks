@@ -1,0 +1,13 @@
+<h2>Arne Janssens</h2>
+<p>Raad het getal tussen 1 en 10:</p>
+<input [(ngModel)]="inputGetal" type="number" (keydown)="onKey($event)" placeholder="Voer hier je nummer in">
+<button [textContent]="buttonContent" (click)="vergelijk()" (click)="addToLijst()"></button>
+<div *ngIf = "gegokteGetallen.length!=0">
+    <h3 *ngIf = "teRadenGetal == gebruikerGetal" [style.color]="Goed">Goed geraden!</h3>
+    <h3 *ngIf = "teRadenGetal != gebruikerGetal">Jammer, probeer het nog eens.</h3>
+</div>
+<p>Je gegokte getallen:</p>
+<ul>
+    <li *ngFor="let inputGetal of gegokteGetallen">{{inputGetal}}</li>
+</ul>
+<button [disabled]="gegokteGetallen.length==0" (click)="clearLijst()">Verwijder getallen</button>

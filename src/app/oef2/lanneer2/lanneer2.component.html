@@ -1,0 +1,33 @@
+Lanneer 
+<h1>Pokémon chooser</h1>
+<div class = "selector_div" [hidden] = showResults>   
+    <p>Choose your pokémon by clicking on it or get a preview by hovering.</p>
+    <div class = "horizontalPokeman">
+        <div *ngFor="let poke of pokemon">
+                <img (mouseover)= "onHover($event)" (click)= "onClick($event)" [src]="linkPrefix + poke.link">
+        </div>
+    </div>
+</div>
+<div class="result" [hidden] = !showResults>
+    <div>
+        <p>You selected this pokemon</p>
+        <p>To go back type "back"</p>
+        <input #input type="text">
+        <button (click)="checkInput(input.value)">ENTER</button>
+    </div>
+    <img [src]="linkPrefix + pokemon[pokemonIndex].link">
+</div>
+<p>{{pokemonName}}</p>
+<ul *ngIf = "showSpecs">
+    <li>HP: {{pokemon[pokemonIndex].HP}}</li>
+    <li>Attack: {{this.pokemon[pokemonIndex].Attack}}</li>
+    <li>Defense: {{this.pokemon[pokemonIndex].Defense}}</li>
+    <li>Special: {{this.pokemon[pokemonIndex].Special}}</li>
+    <li>Speed: {{this.pokemon[pokemonIndex].Speed}}</li>
+</ul>
+<br>
+<br>    
+<p>PS: Indien de foto's niet laden klik dan op deze links en herlaad de webpagina. </p>
+<div *ngFor="let poke of pokemon">
+        <a [href]="linkPrefix + poke.link">{{linkPrefix + poke.link}}</a>
+</div>

@@ -1,0 +1,16 @@
+<p>Aantal pizzas </p>
+<br>
+<input type="number" [(ngModel)]="pizzaCounter">
+<br>
+<p>Aantal personen </p>
+<br>
+<input type="number" [(ngModel)]="peopleCounter">
+<br>
+<div *ngIf="pizzaCounter>=0">
+    <p *ngIf="peopleCounter>0">{{pizzaCounter}} {{pizzas}} verdeeld over {{peopleCounter}} {{people}} betekent dat iedereen {{percentage | percent:'.2'}} van een pizza krijgt</p>
+</div>
+
+
+<div id="app">
+    <canvas id="flower" width="500" height="100"></canvas>
+</div>

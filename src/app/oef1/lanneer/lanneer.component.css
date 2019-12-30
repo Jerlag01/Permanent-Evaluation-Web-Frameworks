@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+.component{
+   font-family: 'Varela Round', sans-serif;
+   background-color:darkblue;
+   color: white;
+   padding: 2rem;
+   border: 10px solid white;
+   border-radius: 25px;
+}
+
+header{
+   border-bottom: 2px solid white;
+}
+
+button{
+   background-color: white;
+   padding: 0.5rem;
+   height: 4rem;
+   width: 4rem;
+   border: solid darkblue;
+}
+
+button:hover{
+   background: darkgrey;
+}
+
+.stats{
+   text-align: left;
+   margin-Left:15%;
+   margin-right: 15%;
+}
+
+h2:hover{
+    position: relative;
+    animation-name: titleAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+ }
+
+ @keyframes titleAnimation{
+    0% {right: 0rem;}
+    25% {right: 2rem;}
+    50% {right: -3rem;}
+    60% {right: 1rem;}
+    75% {right: -2rem;}
+    100% {right: 0rem;}
+ } 

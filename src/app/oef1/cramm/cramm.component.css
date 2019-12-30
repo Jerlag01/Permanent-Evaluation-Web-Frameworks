@@ -1,0 +1,26 @@
+body{
+    background-color:indigo;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+p{
+   font-size: xx-large; 
+   font-family: 'Courier New', Courier, monospace;
+}
+button{
+    box-shadow: 3px 4px 0px 0px #270477;
+	background:linear-gradient(to bottom, indigo 5%, indigo 100%);
+	background-color:indigo;
+	border-radius:18px;
+	border:1px solid #270477;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Courier New', Courier, monospace;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #270477;
+}
+
+        

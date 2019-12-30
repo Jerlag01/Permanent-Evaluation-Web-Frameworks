@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<button (click)="status()" >ON/OFF</button>
+<div class="square">nokia 
+        <div *ngIf = "onoff == true" class ="inner" style="background-color:white;"> {{alert}}</div>
+        <div *ngIf = "onoff == false" class ="inner" style="background-color:blue;"> {{datum | date : 'HH:mm:ss'}} <br>{{tijd | date}} <br>{{n}} <br>{{alert}}
+</div>
+<div class ="button">
+<button (click)="bel()">call</button>
+<button>O</button>
+<button (click)="del()">del</button>
+<br>
+<button (click)="add(1)">1</button>
+<button (click)="add(2)">2</button>
+<button (click)="add(3)">3</button>
+<br>
+<button (click)="add(4)">4</button>
+<button (click)="add(5)">5</button>
+<button (click)="add(6)">6</button>
+<br>
+<button (click)="add(7)">7</button>
+<button (click)="add(8)">8</button>
+<button (click)="add(9)">9</button>
+<br>
+<button (click)="add()"></button>
+<button (click)="add(0)">0</button>
+<button (click)="add()"></button>
+</div>
+</div>
+<br>
+
+
+</body>
+</html> 

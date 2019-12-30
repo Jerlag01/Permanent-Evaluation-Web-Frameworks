@@ -1,0 +1,57 @@
+Hattas 
+<h1>Tik Tak Toe</h1>
+<p>Can you win this game that completely fails to listen to you?</p>
+<div *ngIf="GameOn; else start">
+    <p *ngIf="Counter > 0">
+        Time:
+        <progress [value]="Counter" max="120"></progress>
+        {{Counter}}
+    </p>
+    <div class="grid-container">
+        <ng-container *ngFor="let row of Game.Grid">
+            <button *ngFor="let col of row" pButton type="button" label="{{col}}" (click)="SetEllement()"></button>
+        </ng-container>
+    </div>
+    <button pButton type="button" [label]="StatusText" class="ui-button-success" [disabled]="!GameWon"
+        (click)="StopGame()"></button>
+</div>
+<ng-template #start>
+    <!-- <div *ngIf="OptionsSelected; else OptionButton"> -->
+        <h2>Options:</h2>
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon">#</span>
+                    <input type="text" pInputText placeholder="First character" id="c1" #c1>
+                </div>
+            </div>
+
+            <div class="ui-g-12 ui-md-4">
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon">#</span>
+                    <input type="text" pInputText placeholder="Second character" id="c2" #c2>
+                </div>
+            </div>
+        </div>
+        <div class="ui-g-12">
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><label for="counter">Timer</label></span>
+                <input type="number" id="counter" min="0" max="120" pInputText placeholder="0" #counter>
+                <span class="ui-inputgroup-addon">seconds</span>
+            </div>
+        </div>
+    <!--</div>
+    <ng-template #OptionButton>
+        <button pButton type="button" label="Options" (click)="ShowOptions()" class="UIbtn"></button>
+    </ng-template>
+    <div *ngIf = "c1!=null && c2!=null && counter !=null; else StartNormal"> -->
+        <button pButton type="button" label="Start Game" (click)="StartGame(c1.value, c2.value, counter.value)"
+        class="UIbtn"></button>
+    <!-- </div>
+    <ng-template #StartNormal>
+            <button pButton type="button" label="Start Game" (click)="StartGameNormal()"
+            class="UIbtn"></button>
+    </ng-template> -->
+<!-- IK WOU NOG EEN OPTIONS BUTTON MAKEN MAAR DID ZORGDE ERVOOR DAT #c1, #c2 en #counter niet instantieren en ik de "cannot read property 'value' of undefined" error kreeg-->
+</ng-template>
+<h2>Zeno Hattas</h2>

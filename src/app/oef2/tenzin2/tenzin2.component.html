@@ -1,0 +1,57 @@
+
+Tenzin
+<div class="p-grid">
+
+        <div class="p-col" *ngIf="MenuStatus">
+            <h1>Welcome AP soldier!</h1>
+            <img [width]="BFoto" [height]="HFoto" [src]="ChuckUrl" >
+            <h1>We Need You Soldier!</h1>
+        </div>
+        <div class="p-col" *ngIf="InschrijvingStatus">
+            <h3>TEAM SPELERS</h3>
+            Uw Naam: <input #in5 type="text" autofocus value="" (keyup)="onKey($event)"> <br>
+                Naam 1: <input #in1 type="text" value=""> <br>
+                Naam 2: <input #in2 type="text" value=""> <br>
+                Naam 3: <input #in3 type="text" value=""> <br>
+                Naam 4: <input #in4 type="text" value=""> 
+                <h2 *ngIf="NaamVeld"> Vul alle velden</h2>
+                <p>Speler {{Naam}} staat klaar.</p>
+                <div class="p-col" *ngIf="InschrijvingStatus" >
+                        <button pButton type="button" label="INSCHRIJVEN" (click)="Inschrijven(in1.value,in2.value,in3.value,in4.value,in5.value)"  class="ui-button-info"></button>
+                </div>
+        </div>
+
+        <div class="p-col" *ngIf="SpelStatus">
+                <h2>Geslacht Spel</h2>
+                <br>
+                <br>
+                <h2>Wat is de geslacht van speler: {{SpelerNummer}}?</h2>
+            </div>
+            <div class="p-col" *ngIf="ResultStatus">
+                    <h2>Jouw Resulaat</h2>
+                    <br>
+                    <br>
+                    <h2>Speler: {{Naam}} Heeft {{Score}} Punten</h2>
+                    <br>
+                    <br>
+
+                    <li *ngFor="let speler of SpelersNaam; let i = index">{{speler}} is een {{SpelerGeslacht[i]}}</li>
+                </div>
+        <div>
+
+        </div>
+    </div>
+
+<div class="p-grid ">
+        <div class="p-col" *ngIf="SpelStatus">
+                <button [disabled]="!ResultBtn" pButton type="button" label="MAN" (click)="GeslachtCheckerM()" class="ui-button-rounded ui-button-danger"></button>
+                <button [disabled]="!ResultBtn" pButton type="button" label="VROUW" (click)="GeslachtCheckerV()" class="ui-button-rounded"></button>
+                <button [disabled]="ResultBtn" pButton type="button" label="RESULTAAT" (click)="ToonResulaat()" class="ui-button-rounded ui-button-warning"></button>
+        </div>
+        <div class="p-col" *ngIf="MenuStatus" >
+                <button pButton type="button" label="SPELEN" (click)="SpelenStatus()" class="ui-button-info"></button>
+        </div>
+        
+        
+        
+</div>

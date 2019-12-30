@@ -1,0 +1,17 @@
+<p>oef2-quinten works!</p>
+    <div class="hovertag" (mouseover)="changecolor()" (mouseleave)="changecolorback()" >
+        <p id="hovertag" [style.background-color]="color">hover over me</p> 
+    </div>
+<button (click)="showform()">laat plaatsnamen zien</button>
+<button (click)="datumtoggle()">laat datum zien</button>
+<div *ngIf="formactive">
+    <p>showing when you press the button hiding when pressed again</p>
+    <div *ngFor="let plaats of plaatsnamen"> <p>{{plaats}}</p></div>
+</div>
+<div *ngIf="showdatum">
+    <p>{{datum | date:'dd.MM.yyyy'}}</p>
+</div>
+
+<div *ngFor="let item of items" (click)="onItemClick($event, item)">
+        <button>{{ item }}</button> 
+</div>

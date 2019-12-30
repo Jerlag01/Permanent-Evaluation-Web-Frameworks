@@ -1,0 +1,12 @@
+<body>
+<div><h1>Sara Beeckmans</h1></div>
+<div><p>My birthday is {{ birthday | date }} </p></div>
+<div><p>Random value {{ randomValue | number }} </p></div>
+ 
+<div>
+<p>Deze random som is {{ randomNumber1 | number }} + {{ randomNumber2 | number }} = {{ result | number }} </p>
+<div *ngIf="result">
+    <p>De som is groter dan 20.</p>   
+</div>
+</div>
+</body>

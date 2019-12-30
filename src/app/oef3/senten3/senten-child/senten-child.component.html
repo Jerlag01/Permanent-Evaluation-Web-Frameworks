@@ -1,0 +1,8 @@
+<div>
+    <button (click)="getRandomQuote()">Random Donald Trump quote</button>
+    <p *ngIf="quote">{{ quote.value }}</p>
+    <button (click)="getImageFromService()">Random Donald Trump Tweet</button>
+    <br>
+    <img [src]="imageToShow" alt="Place image title" *ngIf="!isImageLoading; else noImageFound">
+
+</div>

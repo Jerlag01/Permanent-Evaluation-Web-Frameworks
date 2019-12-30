@@ -1,0 +1,24 @@
+.lijst{
+    float: left;
+    width:25px;
+    height:25px;
+    margin:5px;
+}
+
+.canvas{
+    border:1px solid black;
+}
+
+.button-left{
+    float:left;
+    margin:20px;
+}
+
+.button-right{
+    float:left;
+    margin:20px;
+}
+
+.clear{
+    clear:both;
+}

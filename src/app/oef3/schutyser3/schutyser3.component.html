@@ -1,0 +1,20 @@
+<div style="margin: 10px;" class="p-grid p-dir-col" *ngIf="Money != null">  
+    <div style="margin: 10px;">
+        <div class="p-grid p-justify-center">
+            <h2 style="margin: 10px;">Whats your base coins</h2>
+            <p-dropdown [options]="MoneyChoices" [(ngModel)]="selectedCoinBase" placeholder="Select a coin" optionLabel="label" [filter]="true" (onChange)='clickCalcMoney()' ></p-dropdown>
+        </div>
+        <br>
+        <div class="p-grid p-justify-center">
+            <h2 style="margin: 10px;">To what coin do you wanne convert it</h2>
+            <p-dropdown [options]="MoneyChoices" [(ngModel)]="selectedCoinConvert" placeholder="Select a coin" optionLabel="label" [filter]="true" (onChange)='clickCalcMoney()'></p-dropdown>
+        </div>   
+    </div>  
+    <div class="p-grid p-dir-col p-col-align-center" *ngIf="selectedCoinBase != null && selectedCoinConvert != null">
+        <app-schutyser-child [base]="selectedCoinBase.Value" [convert]="selectedCoinConvert.Value" [cours]="selectedCours" ></app-schutyser-child>        
+    </div>
+    <p-card header="Random Joke" *ngIf="Joke != null">
+        {{Joke.value}}
+    </p-card>
+</div>
+

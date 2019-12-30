@@ -1,0 +1,42 @@
+<div>
+    <p *ngIf="Joke">{{ Joke.value }}</p><br>
+    <h2>Steam API User Lookup</h2>
+    <input type="text" value="762AC123E195B6AA8E3C52F07C01F1DE" disabled><br>
+    <app-lagaet-child></app-lagaet-child>
+    <input type="submit" value="Submit" (click)="GetSteamId()"><br>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Steamid</th>
+                <th>Username</th>
+                <th>Profie URL</th>
+                <th>32x32 Image</th>
+                <th>64x64 Image</th>
+                <th>184x184 Image</th>
+                <th>Real Name</th>
+                <th>Country Code</th>
+            </tr>
+            <tr *ngIf="ready == true">
+                <td>{{detail.response.players[0].steamid}}</td>
+                <td>{{detail.response.players[0].personaname}}</td>
+                <td><a href="{{detail.response.players[0].profileurl}}" target="blank">Profile URL</a></td>
+                <td><img src="{{detail.response.players[0].avatar}}"></td>
+                <td><img src="{{detail.response.players[0].avatarmedium}}"></td>
+                <td><img src="{{detail.response.players[0].avatarfull}}"></td>
+                <td>{{detail.response.players[0].realname}}</td>
+                <td>{{detail.response.players[0].loccountrycode}}</td>
+            </tr>
+            <tr>
+                <th>Steamid</th>
+                <th>Username</th>
+                <th>Profie URL</th>
+                <th>32x32 Image</th>
+                <th>64x64 Image</th>
+                <th>184x184 Image</th>
+                <th>Real Name</th>
+                <th>Country Code</th>
+            </tr>
+        </table>
+    </div>
+    <button (click)="getRandomJoke()">Get Random joke</button>
+</div>

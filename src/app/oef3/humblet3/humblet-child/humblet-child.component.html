@@ -1,0 +1,19 @@
+<div>
+    <table>
+        <tr>
+            <th>Opnameplaats straat</th>
+            <th>Datum overtreding</th>
+            <th>Aantal passanten</th>
+            <th>Aantal overtredingen (snelheid)</th>
+            <th>Aantal overtredingen (roodlicht)</th>
+        </tr>
+        <tr>
+            <td>{{offenseObj.opnameplaats_straat}}</td>
+            <td *ngIf="offenseObj.id != 1; else elseBlock" >{{offenseObj.datum_vaststellingDate | date : 'longDate' : 'nl'}}</td>
+            <ng-template #elseBlock>Datum niet gevonden</ng-template>
+            <td>{{offenseObj.aantal_passanten}}</td>
+            <td>{{offenseObj.aantal_overtredingen_snelheid}}</td>
+            <td>{{offenseObj.aantal_overtredingen_roodlicht}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,16 @@
+<div class="thibautStyle">
+  <h1>Verkeersovertredingen stad Antwerpen</h1>
+  <div id="table-wrapper">
+    <div id="table-scroll">
+      <table>
+        <tr>
+          <app-humblet-child *ngFor="let offense of offenses" [offenseObj]="offense" id="{{offense.id}}">
+          </app-humblet-child>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <hr>
+  <h2>Gevers service</h2>
+  <p>Random Bier: {{randomBeer.name}}</p>
+</div>

@@ -1,0 +1,18 @@
+<h4>Ajdin Gaco</h4>
+Het is nu: {{theTime | date: "hh:mm:ss"}}
+<br>
+<h5>Euro to Swiss Franc converter</h5>
+<br>
+<input type="number" [(ngModel)]="val1" (keyup)="Calculate()" placeholder={{curr1}}/>
+<br> {{curr1}} is <b>{{val2}} {{curr2}} </b>
+<br>
+<button (click)="SwitchCurrency()" >Switch currency</button>
+<br> 
+<br> 
+
+
+<button (click)="ButtonCounterDown()" >Count Down</button>
+{{counter}}
+<button (click)="ButtonCounterUp()" >Count Up</button>
+<br>
+<button (click)="ButtonRandomGen()" >Randomize</button>

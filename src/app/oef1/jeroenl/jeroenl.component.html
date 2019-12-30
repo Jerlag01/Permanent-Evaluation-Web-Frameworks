@@ -1,0 +1,12 @@
+<p>{{ pageTitle | uppercase }} van {{pageOwner}}</p>
+<p>Countdown van {{ theDate }}</p>
+<p></p>
+<div>
+    <countdown #cd1 (event)="handleEvent($event)" [config]="{ leftTime : 30 }"></countdown>
+    <div>
+      <button (click)="cd1.pause()" class="btn btn-link btn-sm">pause</button>
+      <button (click)="cd1.resume()" class="btn btn-link btn-sm">resume</button>
+      <button (click)="cd1.stop()" class="btn btn-link btn-sm">stop</button>
+      <button (click)="cd1.restart()" class="btn btn-link btn-sm">restart</button>
+    </div>
+  </div>

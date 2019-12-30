@@ -1,0 +1,32 @@
+
+<app-thielemans-child></app-thielemans-child>
+
+<div>
+    <input #inName type="text" placeholder="Geef Naam in">
+    <button (click)="searchName(inName)">Zoek</button>
+</div>
+
+<div>
+    <table id="datatable" width="100%">
+        <tr>
+            <th>Naam</th>
+            <th>Leeftijd</th>
+            <th>Aantal</th>
+        </tr>
+        <tr>
+            <td>{{agify?.name}}</td>
+            <td>{{agify?.age}}</td>
+            <td>{{agify?.count}}</td>
+        </tr>
+
+    </table>
+</div>
+
+
+
+<div>
+    <button (click)="getImageFromService()">Random Donald Trump Tweet</button>
+    <br>
+    <img [src]="imageToShow" alt="Place image title" *ngIf="!isImageLoading; else noImageFound">
+
+</div> 

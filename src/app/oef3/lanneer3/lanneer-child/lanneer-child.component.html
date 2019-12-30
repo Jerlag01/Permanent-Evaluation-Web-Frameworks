@@ -1,0 +1,16 @@
+<div>
+    <table>
+        <tr>
+            <th>Titel</th>
+            <th>Startdatum</th>
+            <th>Einddatum</th>
+            <th>Auteur documentatie</th>
+        </tr>
+        <tr>
+            <td>{{tentoonstelling.title}}</td>
+            <td>{{tentoonstelling.date_venue_start | date : 'longDate'}}</td>
+            <td>{{tentoonstelling.date_venue_end | date : 'longDate'}}</td>
+            <td>{{tentoonstelling.documentation_author}}</td>
+        </tr>
+    </table>
+</div>

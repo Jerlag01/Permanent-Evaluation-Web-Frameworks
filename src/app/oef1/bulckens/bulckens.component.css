@@ -1,0 +1,19 @@
+#body{
+    background-image: -moz-linear-gradient(-45deg, #4169E1, #FFFF66);
+
+background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.00, #4169E1), color-stop(1.0, #FFFF66));
+
+border: 2px solid #000000;
+
+background-color: #DDDDDD;
+
+padding: 10px;
+
+font-family: Verdana, Geneva, sans-serif;
+
+font-size: 9pt;
+
+color: #000000;
+
+text-align: left;
+}

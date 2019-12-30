@@ -1,0 +1,19 @@
+.thibautStyle{
+    background-color: #ffffff;
+    padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+  border-color: black;
+  padding: 7px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

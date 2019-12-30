@@ -1,0 +1,26 @@
+button {
+  padding: 10px;
+  border-radius: 12px;
+  background: blue;
+  margin: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  border: 1px solid black;
+
+}
+
+ng-container {
+  font-size: 10px;
+}
+
+
+:host {
+font-size: 15px;
+}
+
+.description {
+font-size: 20px;
+}
+
+.TodoList {
+  color: blueviolet;
+}

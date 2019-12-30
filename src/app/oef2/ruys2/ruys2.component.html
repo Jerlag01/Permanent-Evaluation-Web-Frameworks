@@ -1,0 +1,35 @@
+
+<h4>NGFOR</h4>
+<div class="click-container" (click)="onMouseClick($event)">
+<button (click)="changeLogo()">Verander punten</button> 
+<br>
+<img [src]="logo">
+<br>
+<p [innerHTML]="Xpos" ></p>
+<p [innerHTML]="Ypos"></p>
+<br>
+<button (click)="showAge()">Show age</button> 
+<h1>Below 25</h1>
+
+<ul *ngFor = "let person of people">
+  <li *ngIf= "person.age < 25">
+  <p class="name-text">Name: {{ person.name }}</p>
+  <p class="name-age" *ngIf="show">({{person.age}})</p>
+  
+  </li>
+  
+</ul>
+
+<h1>Above 25</h1>
+<ul *ngFor = "let person of people">
+  <li *ngIf= "person.age > 25">
+      <p class="name-text">Name: {{ person.name }}</p>
+      <p class="name-age" *ngIf="show">({{person.age}})</p>
+  </li>
+</ul>
+
+<br>
+<input #in1 type="text"  placeholder="Wat zegt de alert">
+<button (mouseenter)="eventBind(in1.value)">HOVERALERT</button> 
+<br>
+</div>

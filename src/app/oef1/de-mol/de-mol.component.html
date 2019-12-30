@@ -1,0 +1,18 @@
+
+<p>Robin De Mol</p>
+<header>
+<h2>Welkom bij de Zoo </h2>
+<p>je kan via deze component zien welke dieren er zich in deze zoo bevinden</p>
+</header>
+<div *ngIf="DeZoo != null">
+<main>
+<h3>Naam Dier: {{DeZoo.Animals[Count] | uppercase}}</h3>
+<p>Dier Descriptie: {{DeZoo.AnimalDesc[Count]}}</p>
+<button (click)="ShowNextAnimal()" >Volgende</button>
+<p>Aantal dieren op dit moment in de zoo: {{DeZoo.Animals.length}}</p>
+<h3>De tijd momenteel in de zoo</h3>
+<p>{{Tijd | date : "HH:mm:ss"}}</p>
+</main>
+<h2>Ticket voor de zoo kost</h2>
+<p>{{DeZoo.ZooTicketPrijs | currency: 'EUR'}}</p>
+</div>

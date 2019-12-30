@@ -1,0 +1,20 @@
+<tr *ngFor="let info of quotes">
+    <td *ngIf= "id == info.quote_id" >
+        {{info.quote}}
+        <br>
+        <br>
+        <select [(ngModel)]="characterChoise">
+            <option value="Walter White">Walter White</option>
+            <option value="Saul Goodman">Saul Goodman</option>
+            <option value="Jesse Pinkman">Jesse Pinkman</option>
+            <option value="Skyler White">Skyler White</option>
+            <option value="Mike Ehrmantraut">Mike Ehrmantraut</option>
+            <option value="Gus Fring">Gus Fring</option>
+            <option value="Hector Salamanca">Hector Salamanca</option>
+            </select>
+        <button (click)="getRandomQuote(info.author)">Raad!</button>
+        <p *ngIf="foutMelding == true" style="color: red;">
+            TRY AGAIN
+        </p>
+    </td>
+</tr>

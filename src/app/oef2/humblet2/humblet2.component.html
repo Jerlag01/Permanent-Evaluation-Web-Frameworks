@@ -1,0 +1,40 @@
+<div class="thibautStyle">
+        <h1 class="first">Thibaut Humblet</h1>
+        
+        <div>
+          <p>Voer de namen van je vriendjes in</p>
+          <input type="text" id="textboxNaam" pInputText [(ngModel)]="naam" />
+          <p-button label="Click" (onClick)="addWord($event)"></p-button>
+          <div *ngIf="naam">
+            <p>Momenteel voer je {{naam}} in!</p>
+          </div>
+        
+          <ul>
+            <li *ngFor="let item of wordList">{{item}}</li>
+          </ul>
+        </div>
+        
+        <div>
+          <p>Knop aan en uit zetten</p>
+          <p-button label="Aan/uit" (onClick)="disable($event)"></p-button>
+          <p-button label="[Knopje]" [disabled]="disabled" (onClick)="alert($event)"></p-button>
+        </div>
+        
+        <div>
+            <p>Simpele JSON "Generator"</p>
+                <div class="json">
+                        <div *ngFor="let group of groupList">
+                          <input type="text" (blur)="group.naam = groupRef.value" #groupRef>
+                          {{groupRef.value}}
+                        </div>
+                        <pre>
+                                      {{groupList | json}}
+                                      </pre>
+                      </div>
+        </div>
+        
+        <div>
+            <p>Een foto van een poesje</p>
+            <img [alt]="diertje.naam" [src]="diertje.foto" />
+        </div>
+        </div>

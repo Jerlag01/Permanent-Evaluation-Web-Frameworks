@@ -1,0 +1,64 @@
+
+.MainBody{
+    background: #c850c0;
+    background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
+    background: -o-linear-gradient(45deg, #4158d0, #c850c0);
+    background: -moz-linear-gradient(45deg, #4158d0, #c850c0);
+    background: linear-gradient(45deg, #4158d0, #c850c0);
+  
+    align-items: center;
+    justify-content: center;
+    padding: 33px 30px;
+    
+    border-radius: 10px;
+  }
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  table * {
+    position: relative;
+  }
+  table td, table th {
+    padding-left: 8px;
+  }
+  table thead tr {
+    height: 60px;
+    background: #36304a;
+    color: white;
+  }
+  table tbody tr {
+    height: 30px;
+  }
+  table tbody tr:last-child {
+    border: 0;
+  }
+  table td, table th {
+    text-align: left;
+  }
+  table td.l, table th.l {
+    text-align: right;
+  }
+  table td.c, table th.c {
+    text-align: center;
+  }
+  table td.r, table th.r {
+    text-align: center;
+  }
+  button{
+      background: #36304a;
+      color: white;
+      border-radius: 10%;
+      padding:0.6em 2em;
+    border-radius: 8px;
+    font-size:1.1em;
+    border:0;
+    cursor:pointer;
+    margin:1em;
+  }

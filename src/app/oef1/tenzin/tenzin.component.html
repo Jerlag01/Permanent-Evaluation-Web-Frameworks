@@ -1,0 +1,44 @@
+
+<div class="p-grid">
+    <div class="p-col"><h1>BMI CALCULATOR</h1></div>
+</div>
+<div class="p-grid">
+    <div class="p-col">
+        Height: (Meters) <br> <input #in1 type="number" size="5" value="0"><br><br>
+        Weight: (Kilogram)<br><input #in2 type="number" size="3" value="0">
+    </div>
+    <div class="p-col">
+      <h3>{{BMI |number: '1.0-0'}}</h3>  <<br>
+      <h3>{{'Result: ' + GetResult()}}</h3>  
+    </div>
+    <div class="p-col">
+        <img width="200" src="{{imageUrl}}">
+    </div>
+</div>
+
+<div class="p-grid">
+        <div class="p-col">
+            <button (click)="BmiCalculate(in1.value,in2.value)" >CALUCULATE BMI</button>
+        </div>
+</div>
+<br>
+<br>
+----------------------------------------------
+<div class="Character" class="p-grid">
+        <div class="p-col"><h1>AP Student Character Sign</h1></div>
+</div>
+<div class="p-grid">
+        <div class="p-col"> <strong>BirthMonth</strong> <br><input #in3 type="number"></div>
+        <div class="p-col"> <h2>{{ApCharacter | uppercase}}</h2></div>
+        <div class="p-col"> <img width="200" src="{{imageZodiac}}"></div>
+</div>
+<div class="p-grid">
+        <div class="p-col">
+            <button (click)="ZodiacResult(in3.value)" >Find Your AP Character</button>
+        </div>
+</div>
+--------------------------
+<h2>
+        {{'Current Time'| uppercase }}
+        {{TimeNow|date:'HH:mm:ss'}}
+</h2>

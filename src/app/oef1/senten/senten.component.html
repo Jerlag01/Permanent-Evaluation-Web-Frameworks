@@ -1,0 +1,15 @@
+<div class= "uren">
+    <span class="hour">De tijd is {{ hours }}:</span>
+    <span class="min">{{ minutes }}:</span>
+    <span class="second">{{ seconds }}</span>
+</div>
+
+<div class = "data">
+    <p>Datum: {{datum| date : format}}</p>
+    <button (click)="toggleFormat()">Format veranderen datum</button>
+</div>
+<div class = "info">
+    <p>{{naam | lowercase}}</p>
+    <p>{{klas | uppercase}}</p>
+</div>
+<p>Dit zijn random coördinaten: {{corgraad[0]}}°{{corminsec[0]}}'{{corminsec[1]}}" {{breedte}}, {{corgraad[1]}}°{{corminsec[2]}}'{{corminsec[3]}}" {{lengte}}</p>

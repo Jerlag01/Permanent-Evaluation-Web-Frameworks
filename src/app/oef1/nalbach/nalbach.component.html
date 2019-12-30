@@ -1,0 +1,11 @@
+<div id="border">
+<img id="image1" [hidden]="isShow1" src="assets/img_LN/images_background1.1_Lukasz_Nalbach.png">
+<img id="image2" [hidden]="isShow2" src="assets/img_LN/images_background2.1_Lukasz_Nalbach.png">
+<img id="image3" [hidden]="isShow3" src="assets/img_LN/images_background3.1_Lukasz_Nalbach.png">
+<h2>{{Naam}}</h2>
+<h2> De datum van vandaag is {{  datum  |  date:'dd-MM-yyyy'  }}</h2>
+<h2> Het is {{ datum | date:'HH:mm:ss' }}</h2>
+<button id="1" (click)="onClick1()">background 1</button>
+<button id="2" (click)="onClick2()">background 2</button>
+<button id="3" (click)="onClick3()">background 3</button> 
+</div>

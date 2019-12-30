@@ -1,0 +1,41 @@
+<h2>Benoît Lagasse</h2>
+<h3>xtra h tag</h3>
+<hr>
+<!-- ---------------------------------------- -->
+<h5>angular les 5 Two-way Binding</h5>
+<!-- ---------------------------------------- -->
+<p>{{counter}}</p>
+<input #in1 type="number" [value]="counter" (keyup)="SetCounter(in1.value)">
+<br>
+<input type="number" [(ngModel)]="counter">
+<br>
+<select class="form-control" [(ngModel)]="counter"> 
+                        <!--enkel dit ^^ deel met ngmodel voor to-way binding-->
+    <option value=1>A</option>
+    <option value=2>B</option>
+    <option value=3>C</option>
+    <option value=4>D</option>
+</select>
+<hr>
+
+<!-- ---------------------------------------- -->
+<h5>Two-way bindig oef angular ppt 5</h5>
+<!-- ---------------------------------------- -->
+<input placeholder="Voornaam" type="string"[(ngModel)]="voornaam">
+<input placeholder="Achternaam" type="string"[(ngModel)]="achternaam">
+<br>
+<input placeholder="Straat" type="string"[(ngModel)]="straat">
+<input placeholder="Nummer" type="number"[(ngModel)]="nummer">
+<br>
+<input placeholder="postcode" type="number"[(ngModel)]="postcode">
+<input placeholder="gemeente" type="string"[(ngModel)]="gemeente">
+
+<button (click) = toggleDisplay()>Sla op</button> 
+<div *ngIf = "!isShow">
+    <p>{{voornaam}} {{achternaam}}</p>
+    <p>{{straat}} {{nummer}}</p>
+    <p>{{postcode}} {{gemeente}}</p>
+</div>
+
+<hr>
+<!-- ---------------------------------------- -->

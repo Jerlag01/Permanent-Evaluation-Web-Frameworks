@@ -1,0 +1,9 @@
+<h3 [title]="job">Aäron Pauwels</h3>
+<p-button (click)="randomNumber()" *ngIf="ableToReroll" label="Roll"></p-button>
+<p-button (click)="restart()" styleClass="ui-button-success" label="Restart"></p-button>
+<div class="container">
+    <button *ngFor="let item of cijfers, let i = index" (click)="zet(i, $event)">{{cijfers[i]}}</button>
+</div>
+<p>Press the die to keep it.</p>
+<input #tekst type="text" [placeholder]="hint" (mouseover)="show($event)" (mouseleave)="hide($event)">
+<p [textContent] = "tekst.value"></p>

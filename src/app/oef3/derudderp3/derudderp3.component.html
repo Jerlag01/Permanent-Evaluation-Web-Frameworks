@@ -1,0 +1,43 @@
+
+<div>
+    
+    <table>
+        <tr>
+            <th>userID</th>
+            <th> ID</th>
+            <th>title</th>
+            <th>body</th>
+        </tr>
+        <tr *ngFor='let post of posts' style="text-align:center">
+            <td>{{post.userId}}</td>
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+        </tr>
+
+    </table>
+</div>
+
+    <!-- voor 1 of andere rare reden werkte mijn css code enkel als ik deze hier plaats -->
+    <style>
+        table, td, th {  
+          border: 1px solid #ddd;
+          text-align: left;
+        }
+        
+        table {
+          border-collapse: collapse;
+          width: 100%;
+         
+        }
+        
+        div{
+            overflow-y: scroll;
+          height: 500px;
+
+        }
+
+        th, td {
+          padding: 15px;
+        }
+        </style>

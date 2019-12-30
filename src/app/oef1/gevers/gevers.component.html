@@ -1,0 +1,14 @@
+<div class="titel">
+<H1>Sebastiaan Gevers</H1>
+<h2>{{tekst|uppercase}}</h2>
+</div>
+
+<p>De prijs/l  Benzinne is: {{PrijsBenzine | number : '1.1-2' | currency: 'EUR '}}</p>
+
+<div class="input">
+<p>hoeveel liter benzinne wil je:</p>
+<input type="number" [(ngModel)]="Hoeveelheid">
+</div>
+<p>je betaald zo veel: {{ PrijsBenzine *hoeveelheid |currency: 'EUR'}} </p>
+
+<p>je kan ongeveer {{hoeveelheid*aantal_km}} km rijden met deze tank</p>

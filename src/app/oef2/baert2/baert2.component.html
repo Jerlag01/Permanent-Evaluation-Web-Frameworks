@@ -1,0 +1,28 @@
+<p-panel>
+    <p-header>
+        <b>Game Collection</b>
+    </p-header>
+<table *ngIf="GameList.length > 0">
+        <th>Titel</th>
+        <th>Auteur</th>
+        <th>Uitgever</th>
+        <th>Min # spelers</th>
+        <th>Max # spelers</th>
+<tr *ngFor="let game of GameList">
+    <td>{{game.Title}} </td>
+    <td>{{game.Author}}</td>
+    <td>{{game.Publisher}}</td>
+    <td>{{game.MinPlayer}}</td>
+    <td>{{game.MaxPlayer}}</td>
+    <button pButton #but value="{{game.ImageUrl}}" (click)="UpdateImage(but.value)">Show cover</button>
+</tr>
+</table>
+<div *ngIf="ImageVisible==true">
+<img (click)="ToggleImage($event)" *ngIf="Image" height="200" [src]="Image">
+<p>Click on the image holding SHIFT to hide it</p>
+</div>
+<button pButton [disabled]="LoadButton" (click)="GenerateGameList()">Load Collection</button>
+<p-footer>
+    Jonas Baert
+</p-footer>
+</p-panel>

@@ -1,0 +1,71 @@
+<div class="thibautStyle">
+  <h1>Thibaut Humblet</h1>
+  <hr>
+  <div>
+    <h2>Roulette game</h2>
+    <div>
+      <button type="button" (click)="clickSSP('0')">0</button>
+      <button type="button" (click)="clickSSP('1')">1</button>
+      <button type="button" (click)="clickSSP('2')">2</button>
+      <button type="button" (click)="clickSSP('3')">3</button>
+      <button type="button" (click)="clickSSP('4')">4</button>
+      <button type="button" (click)="clickSSP('5')">5</button>
+      <button type="button" (click)="clickSSP('6')">6</button>
+      <button type="button" (click)="clickSSP('7')">7</button>
+      <button type="button" (click)="clickSSP('8')">8</button>
+      <button type="button" (click)="clickSSP('9')">9</button>
+      <p>Balletje viel op: {{stringRandomItem}}</p>
+      <div *ngIf="gewonnen">
+        <p><strong>Gewonnen!!</strong></p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Boodschappenlijstje</h2>
+    <p>Een Boodschappenlijstje voor dove mensen (zo horen ze goed wat er op staat)</p>
+    <input #newItem (keyup.enter)="addItem(newItem.value); newItem.value=''"
+      (blur)="addItem(newItem.value); newItem.value='' ">
+
+    <button (click)="addItem(newItem.value)">Voeg Toe</button>
+
+    <ul>
+      <li *ngFor="let item of list">{{item | uppercase}}</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Hoe laat is het?!</h2>
+    <p>Het is nu</p>
+    {{Time | date : "HH:mm:ss dd-MM-yy"}}
+  </div>
+  <div>
+    <h2>Eerste letter woordenLijst</h2>
+    <input #newWord (keyup.enter)="addWord(newWord.value); newWord.value=''"
+      (blur)="addWord(newWord.value); newWord.value='' ">
+
+    <button (click)="addWord(newWord.value)">Genereer eerste letter</button>
+
+    <ul>
+      <li *ngFor="let word of wordList">{{word | slice : 0:1}}</li>
+    </ul>
+  </div>
+  <div>
+    <h2>
+      Overtredingen per straat Antwerpen
+    </h2>
+    <button type="button" (click)="makeRequest()">Genereer data</button>
+    <div *ngIf="loading">
+      <p>Data laden ...</p>
+    </div>
+    <div>
+      <table>
+        <tr *ngFor="let item of data">
+          <td>{{item.datum_vaststelling}}</td>
+          <td>{{item.opnameplaats_straat}} </td>
+          <td>{{item.aantal_passanten}}</td>
+          <td>{{item.aantal_overtredingen_snelheid}} </td>
+          <td>{{item.aantal_overtredingen_roodlicht}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

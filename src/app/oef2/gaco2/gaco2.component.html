@@ -1,0 +1,38 @@
+<h4>Ajdin Gaco</h4>
+    
+
+Current sides: {{NumberOfSides}}
+    <img src='{{thumpsuppic}}' style="width:10%">
+    <br>
+    <div class="square" (mouseover)="RollDice()" (click)="DontTouch()" >{{CurrentSide}}</div>
+    {{RandomText}}
+    <br>
+    <button (click)="RollDice()">Roll</button>
+    <br>
+    <button (click)="ShowHistorytoggle()">Show History</button>
+    <div *ngIf="ShowHistory">
+            <table *ngIf="HistoryOfRolls.length > 0">
+                    <th>Attempt</th>
+                    <th>Result</th>
+                <tr *ngFor="let item of HistoryOfRolls">
+                    <td>{{item.row}} </td>
+                    <td>{{item.result}}</td>
+                </tr>
+            </table>
+    </div>
+    
+
+<br>
+
+<button (click)="ShowHideEditor()">{{DiceEditonButtonLabel}}</button>
+<div *ngIf="DiceEditor">
+        <form>
+                Dice Editor
+                <br>
+                <input #in1 type="number" placeholder = "Number of sides" (keyup)="SetSides(in1.value)">
+                <button (click)="SetSides(6)">Reset</button>
+            </form>
+</div>
+<br>
+Hovering over the dice will also roll it.   
+

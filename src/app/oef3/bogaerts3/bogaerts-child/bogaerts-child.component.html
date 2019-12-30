@@ -1,0 +1,30 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Launch Date</th>
+            <th>Launch Site</th>
+        </tr>
+        <tr>
+            <td>{{launchObj.mission_name}}</td>
+            <td>{{launchObj.launch_date_utc | date : 'dd/MM/yyyy HH:mm' : '+0100': 'nl'}}</td>
+            <td>{{launchObj.launch_site.site_name_long}}</td>
+        </tr>
+        <tr>
+            <th>Payload</th>
+            <th>Customer</th>
+            <th>Type</th>
+        </tr>
+        <tr *ngFor="let payload of launchObj.rocket.second_stage.payloads">
+            <td>{{payload.payload_id}}</td>
+            <td>{{payload.customers}}</td>
+            <td>{{payload.payload_type}}</td>
+        </tr>
+        <tr *ngIf="launchObj.details">
+            <th colspan="5">Details</th>
+        </tr>
+        <tr  *ngIf="launchObj.details">
+            <td colspan="5">{{launchObj.details}}</td>
+        </tr>
+    </table>
+</div>

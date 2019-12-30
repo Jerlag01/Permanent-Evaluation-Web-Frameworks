@@ -1,0 +1,52 @@
+Benoit	Lagasse de Locht
+<hr>
+<b>*ngIf</b>
+
+<p>Geef een getal in:</p>
+<input (keyup)="onKey($event)" type="text">
+<p>{{input}}</p>
+<p *ngIf="KleinerDan0">je getal is kleiner dan 0</p>
+<p *ngIf="GroterDan10">je getal is groter dan 10</p>
+<p *ngIf="Tussen0En10">je getal is tussen 5 en 10</p>
+<hr>
+
+<b>*ngFor</b>
+
+<p>bekenste automerken:</p>
+<li *ngFor="let brand of brands">{{brand}}</li>
+<hr>
+
+<b>Property binding</b>
+<br>
+<button (click)="btnAction()">{{btnText}}</button>
+<br>
+<textarea [disabled]="btnState" name="txtArea" id="" cols="20" rows="2">ik ben een textvak.</textarea>
+<br>
+<img [src]="imgBugatti" alt="" width="320" height="180">
+<br>
+<input type="text" [disabled]="true" [value]="txtBugatti" size="{{txtBugatti.length-8}}">
+
+<hr>
+
+<b>Event binding</b>
+<br>
+
+<img [hidden]="hidePic1" [src]="imgBugatti2" alt="" width="160" height="90">
+<img [hidden]="hidePic2" [src]="imgBugatti3" alt="" width="160" height="90">
+<p (mouseover)="mouseOver()">hover over mij! (over)</p>
+<p (mouseleave)="mouseLeave()">hover over mij! (leave)</p>
+<hr>
+
+<b>Event Parameter</b>
+<br>
+<label (mousedown)="posXY($event)">mouse position: X:{{mouseX}} || Y:{{mouseY}}</label>
+<hr>
+
+<b>template reference variable</b>
+<br>
+<input type="text" #test>
+<br>
+<button (click)="show(test)">show</button>
+<br>
+<input [disabled]="true" type="text" value="{{txtTest}}">
+<br>

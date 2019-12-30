@@ -1,0 +1,28 @@
+.square {
+    border-radius: 29px;
+    height: 300px;
+    width: 200px;
+    background-color: #555;
+    font-weight: bold;
+    text-align: center;
+  }
+  .inner{
+    border-radius: 29px;
+  height: 110px;
+    width: 160px;
+    margin: auto;
+    background-color: blue;
+  }
+  
+  .button button {
+    border-radius: 29px;
+  margin: auto;
+  background-color: grey;
+  padding: 4px 22px;
+  cursor: pointer;
+  border-left: none;
+  border-right: none;
+  margin-top: 5px;
+  text-align: center;
+  }
+  

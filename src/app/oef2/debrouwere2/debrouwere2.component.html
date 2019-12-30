@@ -1,0 +1,25 @@
+<body (mousemove)="coordsUpdate($event)">
+<h1 (mouseover)="hoverToggle()" (mouseleave)="hoverToggle()" 
+    [ngStyle]="{color: hover==true ? 'red' : 'green' }">Tim De Brouwere</h1>
+<h5>^Hoverable^</h5>
+<button [disabled]="buttonDisabled" (click)=StartButton()>{{StartKnop}}</button>
+
+<div *ngIf="showing">
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Director</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let episode of episodes">
+                <td>{{episode.title}}</td>
+                <td>{{episode.director}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <input value="{{xPos}}">
+    <input value="{{yPos}}">
+</div>
+</body>

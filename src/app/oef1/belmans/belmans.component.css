@@ -1,0 +1,27 @@
+.body{
+    background-color: aqua;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+div.invisible{
+    color: aqua;
+}
+button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+button{
+    width: fit-content;
+}
+.GuessButton{
+    width: 50px;
+}
+.title{
+    font-size: 28px;
+}
+i{
+    font-size: 15px;
+}
+p{
+    font-size: 13px;
+}

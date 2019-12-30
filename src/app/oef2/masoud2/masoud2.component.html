@@ -1,0 +1,29 @@
+<body>
+        <h2 [innerHTML]="Naam">
+
+        </h2>
+        <ul>
+            <li *ngFor="let person of people; let i = index"> 
+                        {{ i + 1 }} - {{ person.naam }} 
+            </li>
+        </ul>
+        <div *ngIf="show">
+            Welkom to my App
+            <p>{{count}}</p>
+        </div>
+            
+        <input type="checkbox" [(ngModel)]="selected"/>Checked om Image te tonen.
+        <div  *ngIf="selected">
+             <!-- <p-galleria [images]="images"  panelWidth="600" panelHeight="300" [showCaption]="true"></p-galleria> -->
+              
+        </div>
+        <input type="text" class="calculator-screen" [value]="currentNumber" disabled />
+        
+        <button  (click)="Add()" pButton type="button" label="Plus" class="ui-button-rounded ui-button-success" ></button>
+        <button  (click)="Sub()" pButton type="button" label="Min" class="ui-button-rounded ui-button-danger"  ></button>
+        <button (click)="showMsg()"  pButton type="button" label="Bericht"  ></button>
+      
+         
+</body>
+
+

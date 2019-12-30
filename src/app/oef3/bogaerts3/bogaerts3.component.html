@@ -1,0 +1,17 @@
+<div>
+    <p *ngIf="currentUser">Random User: {{currentUser.name}}
+    </p>
+    <h2>SpaceX Launch Data</h2>
+    <div class="input">
+        <select [(ngModel)]="selectorState" (ngModelChange)="onSelectChange($event)">
+            <option value="0">All Launches</option>
+            <option value="1">Past Launches</option>
+            <option value="2">Upcoming Launches</option>
+        </select>
+        <button (click)="resetClick()">Reset Filter</button>
+    </div>
+    <div class="list">
+        <div class="loader" *ngIf="launches.length <= 0"></div>
+        <app-bogaerts-child *ngFor="let launch of launches" [launchObj]="launch" id="{{launch.flight_number}}"></app-bogaerts-child>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+h2
+{
+    color:Tomato;
+}
+#border
+{
+    background-color: blue;
+    border: 5px solid black;
+    border-radius: 35px;
+    /* background-image: url("src\assets\img_LN\images_background1.1_Lukasz_Nalbach.png"); */
+}
+button
+{
+    background-color: darkblue;
+    width: 150px;
+    height: 50px;
+    margin-right: 10px;
+    border: solid 5px black;
+    border-radius: 15px ;
+    color: brown;
+}
+
+button:hover{
+    color:rgb(0, 209, 35); background:rgb(136, 0, 0);
+  -o-transition:color .2s ease-out, background 1s ease-in;
+  -ms-transition:color .2s ease-out, background 1s ease-in;
+  -moz-transition:color .2s ease-out, background 1s ease-in;
+  -webkit-transition:color .2s ease-out, background 1s ease-in;
+  transition:color .2s ease-out, background 1s ease-in;
+}
+#image1,#image2,#image3
+{
+    width: 250px;
+    height: 150px;
+}

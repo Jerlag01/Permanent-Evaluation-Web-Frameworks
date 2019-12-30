@@ -1,0 +1,10 @@
+<div>
+    <h1>{{Naam | uppercase}}</h1> 
+</div>
+<div *ngIf="punten">
+    <div>Je behaalde: {{punten |number: "1.2-2"}} / 10 </div>
+    <div *ngIf = "punten <= 5"> Dit kan beter!</div>
+    <div *ngIf = "punten > 5"> Doe zo verder!</div>
+</div>
+<div><h2>Vandaag: {{datum | date: "EEEE" | lowercase}} </h2></div>
+

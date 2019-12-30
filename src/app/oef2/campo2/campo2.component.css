@@ -1,0 +1,22 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1%;
+    background-color: gold;
+    padding: 1%;
+}
+.grid-container > li {
+    background-color: slategrey;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 12px;
+    list-style-type: none;
+    padding:50px 0;
+  }
+h1{
+    padding:1px;
+}
+img{
+    width: 20%;
+    padding:0;
+}

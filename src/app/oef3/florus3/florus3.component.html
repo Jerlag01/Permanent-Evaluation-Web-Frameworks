@@ -1,0 +1,13 @@
+
+<div>
+<table>
+    <tr *ngFor= "let spel of game">
+        <th *ngIf="spelId == spel.gameId">Het beste gezelschapspel: {{spel.name}}</th>
+    </tr>
+<tr>
+    <th>zet de juiste quote bij het juiste personage:</th>
+</tr>
+<app-florus-child></app-florus-child>
+</table>
+</div>
+<br>

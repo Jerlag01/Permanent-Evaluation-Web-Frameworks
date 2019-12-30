@@ -1,0 +1,11 @@
+<div>
+    <p>get the wind Speedan direction in a city</p>
+    <button (click)="getWindspeed()">get wind info</button>
+    <div *ngIf="this.showing == true">
+        <p>City: {{this.wheater.location.name}}</p>
+        <p>windSpeed: {{this.wheater.current.wind_speed}} Km/h</p>
+        <p>Wind direction degree : {{this.wheater.current.wind_degree}}° </p>
+        <p>Wind direction: {{this.wheater.current.wind_dir}}</p>
+    </div>
+</div>
+

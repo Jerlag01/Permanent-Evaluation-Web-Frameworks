@@ -1,0 +1,12 @@
+.titel{
+    background-color:gray;
+    /*opacity:60%;*/
+    color: white;
+    border-radius: 5%;
+}
+
+.input{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+}

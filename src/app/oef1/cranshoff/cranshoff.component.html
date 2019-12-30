@@ -1,0 +1,23 @@
+<div>
+    <div>
+    <h2>Glen Cranshoff</h2>
+    <h3>Datum:{{datum | date:" dd/MM/yy"}}</h3><br>
+    </div>
+
+    <div>
+    <h3>euro to dollar converter</h3>
+    <input type="number" placeholder="euro" [(ngModel)]="bedrag" ><br>
+    <button (click)="exchange();">convert</button><br>
+    <p>{{dollarBedrag | currency}}</p>
+    </div>
+
+    <div>
+    <h3>random nummer</h3>
+    <p>random number between</p>
+    <input type="number" placeholder="0" [(ngModel)]="minRandom" ><br>
+    <input type="number" placeholder="0" [(ngModel)]="maxRandom" ><br>
+    <button (click)="getrandomNumber()">Random</button>
+    <p>Random: {{randomNr}}</p>
+    </div>
+
+</div>

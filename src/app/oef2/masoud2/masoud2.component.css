@@ -1,0 +1,11 @@
+body{
+    background-color: aquamarine;
+    align-items: center;
+}
+div{
+    justify-items: center;
+}
+button{
+    margin: 5px;
+}
+

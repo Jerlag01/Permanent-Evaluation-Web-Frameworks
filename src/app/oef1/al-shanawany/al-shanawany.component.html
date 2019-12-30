@@ -1,0 +1,15 @@
+<H2>Prime Number</H2>
+<p>Enter a number to check it it's a prime number</p>
+
+<input    min="0" #int1 type="number" [(ngModel)]="UserNumber" >
+<br>
+<br>
+<button type="button" (click)="ifPrime()">Calculate</button>
+<br>
+ 
+ <h4> 
+ {{isPrime}}
+</h4>
+<br>
+<p>{{todayDate | date: "hh:mm:ss"}}</p>
+<p>Random number:   {{Random}}</p>

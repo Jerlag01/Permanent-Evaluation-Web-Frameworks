@@ -1,0 +1,71 @@
+<h2>Cédric De Rudder</h2>
+<h3>Bestelling</h3>
+<div class="main-bestelling">
+    <div class="item">
+        <div class="order">
+            <p>Prijs: {{prijzen[0] | currency: 'EUR'}}</p>
+            <p>{{dranken[0]}}</p>
+            <input type="number" [(ngModel)]="aantal[0]">
+        </div>
+        <div class="subtotal">
+            = {{prijzen[0] * aantal[0] | currency: 'EUR'}}
+        </div>
+    </div>
+    <div class="item">
+        <div class="order">
+            <p>Prijs: {{prijzen[1] | currency: 'EUR'}}</p>
+            <p>{{dranken[1]}}</p>
+            <input type="number" [(ngModel)]="aantal[1]">
+        </div>
+        <div class="subtotal">
+            = {{prijzen[1] * aantal[1] | currency: 'EUR'}}
+        </div>
+    </div>
+    <div class="item">
+        <div class="order">
+            <p>Prijs: {{prijzen[2] | currency: 'EUR'}}</p>
+            <p>{{dranken[2]}}</p>
+            <input type="number" [(ngModel)]="aantal[2]">
+        </div>
+        <div class="subtotal">
+            = {{prijzen[2] * aantal[2] | currency: 'EUR'}}
+        </div>
+    </div>
+    <div class="item">
+        <div class="order">
+            <p>Prijs: {{prijzen[3] | currency: 'EUR'}}</p>
+            <p>{{dranken[3]}}</p>
+            <input type="number" [(ngModel)]="aantal[3]">
+        </div>
+        <div class="subtotal">
+            = {{prijzen[3] * aantal[3] | currency: 'EUR'}}
+        </div>
+    </div>
+    <div class="item">
+        <div class="order">
+            <p>Prijs: {{prijzen[4] | currency: 'EUR'}}</p>
+            <p>{{dranken[4]}}</p>
+            <input type="number" [(ngModel)]="aantal[4]">
+        </div>
+        <div class="subtotal">
+            = {{prijzen[4] * aantal[4] | currency: 'EUR'}}
+        </div>
+    </div>
+    <div class="total">
+        <input type="button" value="Bestel" (click)="Bestel()">
+        <div class="totalprice">
+            <strong>{{totaal | currency: 'EUR'}}</strong>
+        </div>
+    </div>
+</div>
+<br>
+<h3>Procent berekening</h3>
+<div class="main-procent">
+    <input type="number" [(ngModel)]="procent">
+    <p>{{procent | percent}}</p>
+</div>
+<br>
+<h3>Datum van vandaag</h3>
+<div class="main-datum">
+    <p>{{datum | date:'medium'}}</p>
+</div>

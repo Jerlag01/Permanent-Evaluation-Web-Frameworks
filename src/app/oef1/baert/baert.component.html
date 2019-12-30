@@ -1,0 +1,7 @@
+<p>{{ pageTitle | uppercase }} van {{pageOwner}}</p>
+<p>niet vergeten op {{ currentDate | date:"dd/MM/yy" }}</p>
+<p></p>
+<ol *ngIf="boodschappenLijst">
+    <li *ngFor="let product of boodschappenLijst; let i=index">{{product}} - {{ prijs[i] | currency:'€' }}</li>
+</ol>
+<button (click)="updatePrice()">Prijsupdate!</button>

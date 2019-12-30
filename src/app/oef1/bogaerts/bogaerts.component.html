@@ -1,0 +1,9 @@
+<div id="body">
+<h1>Kobe Bogaerts</h1>
+<p>Random percentage: {{percentage | percent}}</p>
+<hr>
+<div> <p *ngFor="let i of dateArray | slice:3:8">{{'Random Date: '+(i | date : 'short')}}</p></div>
+<hr>
+<button (click)="toggleCurrency()">Change To {{this.toggle ? 'USD' : 'EURO'}}</button>
+<p>{{getCurrency() | currency : getCurrencyType()}}</p>
+</div>

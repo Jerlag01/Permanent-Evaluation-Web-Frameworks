@@ -1,0 +1,38 @@
+Wats
+<input #in type="text" placeholder="enter a color">
+<button (click)="AddBall(in.value)">Nieuwe bal</button>
+<br class="clear">
+<div class="clear">
+    <p>Aantal ballen</p>
+    <input type="number" [(ngModel)]="BalCounter">
+</div>
+<div>
+    <p>Snelheid</p>
+    <input type="number" [(ngModel)]="speed">
+</div>
+
+
+
+<button [disabled]="balList.length<2" (click)="DownCounter()">
+    <</button> <button [disabled]="balList.length<1" (mouseup)="Geklikt($event)" (mousedown)="GaatKlikken($event)"
+        (click)="Verwijder()">{{buttonText}}
+</button>
+<button [disabled]="balList.length<2" (click)="UpCounter()">></button>
+<p>{{warning}}</p>
+
+<p *ngIf="BalCounter==1">Bal in het spel</p>
+<div *ngIf="BalCounter>1">
+    <p>Ballen in het spel</p>
+</div>
+
+
+<div *ngFor="let circle of balList">
+
+    <p class="lijst">Bal {{circle.number}}:</p>
+
+    <div class="lijst" [style.background-color]="circle.color"></div>
+</div>
+
+<div *ngIf="BalCounter>0" id="app">
+    <canvas class="canvas" id="balls" width="500" height="500"></canvas>
+</div>

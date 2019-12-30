@@ -1,0 +1,8 @@
+<div class="thielemans">
+<h1>{{name | uppercase}}</h1>
+<p>het tijdstip in <mark class="black">{{city}}</mark> is op dit moment: </p>
+<p>{{datum | date: 'HH:mm:ss'}}</p>
+<p>{{datum | date: 'EEEE dd MMMM'}}</p>
+<p>{{datum | date: 'yyyy GGGG'}}</p>
+<button (click) = "randomCity()" class="button">verander stad</button>
+</div>

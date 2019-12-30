@@ -1,0 +1,10 @@
+.numbers{
+    display: grid;
+    grid-auto-columns: 50% 50%;
+}
+.left{
+    grid-column: 1/2;
+}
+.right{
+    grid-column: 2/3;
+}

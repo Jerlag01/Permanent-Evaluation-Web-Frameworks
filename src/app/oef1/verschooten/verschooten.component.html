@@ -1,0 +1,11 @@
+<p>teller: {{counter}}</p>
+
+
+<p>clock: {{theDate | date : "HH:mm:ss"}}</p>
+<p>klik op Bereken om de random waarde bij uw prijs toe te voegen, want kortingen zijn overrated.</p>
+<p>random: {{random}}</p>
+<button (click)="Bereken()" >Bereken</button>
+<p>prijs: {{prijs | currency:'€'  }}</p>
+<p>klik op Verminderen om de prijs te verminderen met de waarde van de teller en het om te zette in dollar, want piping en kortingen zijn toch ni zo overrated.</p>
+<button (click)="Verminderen()" >Verminderen</button>
+<p>prijs: {{prijs | currency: '$'}}</p>
